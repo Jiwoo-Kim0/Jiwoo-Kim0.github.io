@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>김지우 · Portfolio</title>
-  <meta name="description" content="백엔드·인프라 개발자 김지우의 포트폴리오 — 도담, 길봄, HobbyKit, 들락날룸, nagAI">
+  <meta name="description" content="React·Spring Boot 웹 서비스 개발자 김지우의 포트폴리오 — 길봄, 도담, HobbyKit, 들락날룸, nagAI">
   <meta property="og:title" content="김지우 · Portfolio">
-  <meta property="og:description" content="백엔드·인프라 개발자 김지우의 포트폴리오">
+  <meta property="og:description" content="React·Spring Boot 웹 서비스 개발자 김지우의 포트폴리오">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -24,14 +24,15 @@
   <!-- 소개 -->
   <header class="intro">
     <h1>김지우 <small>Jiwoo Kim</small></h1>
-    <p class="role">백엔드 · 인프라 개발자</p>
+    <p class="role">웹 서비스 개발자 · React / Spring Boot</p>
     <p>
-      Spring Boot 백엔드와 Docker·Jenkins 기반 인프라를 주로 다룹니다.
-      장애가 나면 추측보다 로그와 측정으로 원인을 좁히고, 고친 뒤에는 같은 문제가 다시 생기지 않도록
-      테스트나 배포 단계에 확인 장치를 남기는 편입니다.
+      React와 Spring Boot로 한 기능을 화면부터 서버까지 만들고, 배포한 뒤 장애 원인을 찾는 일까지 맡아 왔습니다.
+      기능을 만들기 전에 <b>틀리면 안 되는 것</b>이 무엇인지부터 정합니다. 권한 밖의 데이터가 나가지 않는 것,
+      AI가 금액을 지어내지 않는 것, 쿠폰이 두 장 나가지 않는 것 같은 일입니다.
     </p>
     <p>
-      SSAFY 15기에서 팀 프로젝트 네 개를 진행했고, 그중 공통 프로젝트 <b>길봄</b>으로 반 1등 우수상을 받았습니다.
+      삼성청년SW·AI아카데미(SSAFY) 15기에서 Spring·DB·Android를 공부하고 팀 프로젝트 네 개를 진행했습니다.
+      공통 프로젝트 <b>길봄</b>으로 반 1등 우수상을 받았습니다.
     </p>
     <div class="contact">
       <a href="https://github.com/Jiwoo-Kim0" target="_blank" rel="noopener">GitHub</a>
@@ -45,10 +46,11 @@
   <section class="sec">
     <h2>요약</h2>
     <ul class="highlights">
-      <li>도담에서 서버 인프라와 배포 자동화를 혼자 맡았습니다. 배포 전에 임시 컨테이너로 기동을 먼저 확인하도록 바꾼 뒤로는, 잘못된 코드가 두 번 배포될 뻔했지만 <b>서비스 중단 없이</b> 막혔습니다.</li>
-      <li>부하 테스트 12회와 프로파일링으로 병목이 커넥션 풀이 아니라 CPU라는 것을 확인했고, 코드를 고치지 않고 설정 2건만 바꿔 <b>처리량을 9.4% 올렸습니다</b>.</li>
-      <li>LLM이 금융 수치를 지어내지 못하도록, 답변에 나온 숫자를 서버가 계산한 값과 하나씩 대조해 맞지 않으면 답변을 버리는 검증 단계를 만들었습니다.</li>
-      <li>길봄에서는 결함 기능을 백엔드부터 화면까지 혼자 맡았고, 모니터링 알람 39개와 암호화 백업, 복원 리허설을 구축했습니다.</li>
+      <li><b>화면부터 서버까지</b> — 길봄에서 결함 기능의 Spring Boot API 11개와 React 목록·지도·상세 화면을 혼자 만들었고, 새 결함은 실시간 알림(SSE)으로 화면에 바로 띄웠습니다.</li>
+      <li><b>틀리면 안 되는 것부터</b> — 권한은 화면에서 가리지 않고 DB 조회 단계에서 걸렀습니다. AI 코치 답변의 숫자는 서버 계산값과 대조해 하나라도 다르면 버렸고, 쿠폰은 요청이 동시에 와도 한 장만 나가게 고쳤습니다.</li>
+      <li><b>배포와 운영</b> — 도담에서 AWS EC2 서버와 Jenkins 배포 자동화를 혼자 맡았습니다. 배포 전에 새 버전을 임시로 띄워 확인하게 한 뒤로는, 잘못된 변경이 올라와도 서비스가 멈추지 않았습니다.</li>
+      <li><b>AI 활용 개발</b> — LLM 금융 코치 API(도담)와 RAG 기반 키트 추천(HobbyKit)을 만들었습니다.</li>
+      <li><b>수상 · 자격</b> — SSAFY 공통 프로젝트 우수상, 정보처리기사, TOEIC 935</li>
     </ul>
   </section>
 
@@ -56,12 +58,12 @@
   <section class="sec">
     <h2>기술</h2>
     <dl class="skills">
-      <div class="row"><dt>Backend</dt><dd>Java 21, Spring Boot 3.5, Spring Security, JPA, Flyway, FastAPI, Node.js(Express)</dd></div>
-      <div class="row"><dt>Database</dt><dd>MySQL, PostgreSQL + PostGIS, Redis, MongoDB, Qdrant</dd></div>
-      <div class="row"><dt>Infra</dt><dd>AWS EC2, Docker Compose, Nginx, Jenkins, GitHub Actions, Let's Encrypt</dd></div>
-      <div class="row"><dt>모니터링·성능</dt><dd>Prometheus, Grafana, Loki, Alertmanager, k6, JFR</dd></div>
-      <div class="row"><dt>Frontend</dt><dd>React, TypeScript, Vite, Playwright, Flutter</dd></div>
-      <div class="row"><dt>AI</dt><dd>OpenAI API, RAG(임베딩·벡터 검색), LLM 출력 검증</dd></div>
+      <div class="row"><dt>Web Frontend</dt><dd>React, TypeScript, Vite, Playwright(E2E 테스트)</dd></div>
+      <div class="row"><dt>Web Backend</dt><dd>Java 21, Spring Boot 3.5, Spring Security, JPA, Flyway · FastAPI, Node.js(Express)</dd></div>
+      <div class="row"><dt>Mobile</dt><dd>Flutter(비콘 쿠폰 앱·서버 연동) · Android(SSAFY 교육 240시간)</dd></div>
+      <div class="row"><dt>DBMS</dt><dd>MySQL, PostgreSQL + PostGIS, Redis, MongoDB</dd></div>
+      <div class="row"><dt>AWS · 운영</dt><dd>AWS EC2, Docker Compose, Nginx, Jenkins, GitHub Actions, Prometheus, Grafana, k6</dd></div>
+      <div class="row"><dt>AI</dt><dd>OpenAI API, RAG(임베딩·Qdrant 벡터 검색), LLM 출력 검증</dd></div>
     </dl>
   </section>
 
@@ -69,12 +71,66 @@
   <section class="sec" id="projects">
     <h2>프로젝트</h2>
     <ul class="index">
-      <li><span class="when">2026.08 – 09 · 6주</span><span><a href="#dodam">도담</a> <span class="desc">— 청년 AI 금융 코치 앱</span></span></li>
-      <li><span class="when">2026.07 – 08 · 6주</span><span><a href="#gilbom">길봄</a> <span class="desc">— 점자블록 결함 관제 서비스 · 우수상</span></span></li>
-      <li><span class="when">2026.05 – 06 · 5주</span><span><a href="#hobbykit">HobbyKit</a> <span class="desc">— AI 취미 키트 추천 커머스</span></span></li>
-      <li><span class="when">2026.05 · 1주</span><span><a href="#roomtrade">들락날룸</a> <span class="desc">— 교육생 양도 마켓 MVP</span></span></li>
-      <li><span class="when">2025.03 – 06 · 3개월</span><span><a href="#nagai">nagAI</a> <span class="desc">— 웹캠 AI 집중력 관리</span></span></li>
+      <li><span class="when">2026.07 – 08 · 6주</span><span><a href="#gilbom">길봄</a> <span class="desc">— 점자블록 결함 관제 웹 · 우수상</span></span></li>
+      <li><span class="when">2026.08 – 09 · 6주</span><span><a href="#dodam">도담</a> <span class="desc">— 청년 AI 금융 코치 Android 앱</span></span></li>
+      <li><span class="when">2026.05 – 06 · 5주</span><span><a href="#hobbykit">HobbyKit</a> <span class="desc">— AI 취미 키트 추천 커머스 앱</span></span></li>
+      <li><span class="when">2026.05 · 1주</span><span><a href="#roomtrade">들락날룸</a> <span class="desc">— 교육생 양도 마켓 웹</span></span></li>
+      <li><span class="when">2025.03 – 06 · 3개월</span><span><a href="#nagai">nagAI</a> <span class="desc">— 웹캠 AI 집중력 관리 웹</span></span></li>
     </ul>
+
+    <!-- 길봄 -->
+    <article class="project" id="gilbom">
+      <h3>길봄 — 자율주행 로봇 점자블록 결함 관제</h3>
+      <p class="tagline">로봇이 보행로를 순찰하며 깨진 점자블록을 찾아 보내면, 관리자가 웹 지도에서 위치와 사진을 보고 처리 상태를 관리하는 서비스</p>
+      <p class="award">우수상 — 삼성청년SW·AI아카데미 2학기 공통 프로젝트 구미 1반 1등 (2026.08.10)</p>
+      <div class="row">
+        <dl class="facts">
+          <dt>기간</dt><dd>2026.07.06 – 08.10 (6주)</dd>
+          <dt>구분</dt><dd>SSAFY 공통 프로젝트 (AIoT)</dd>
+          <dt>인원</dt><dd>7명</dd>
+          <dt>역할</dt><dd>결함 기능 API·화면 단독<br>모니터링·백업</dd>
+          <dt>기술</dt><dd>Spring Boot, React, TypeScript, PostgreSQL + PostGIS, SSE, Playwright</dd>
+        </dl>
+        <div class="main">
+          <h4>결함 API — 볼 수 있는 것만 나가게</h4>
+          <ul>
+            <li>Spring Boot로 결함 조회·상태 변경·병합·내보내기 API 11개와 실시간 알림 스트림(SSE)을 만들었습니다.</li>
+            <li>관리자는 자기에게 배정된 로봇의 결함만 봐야 했습니다. 팀과 논의해 <b>화면에서 가리는 대신 DB 조회 단계에서 걸렀습니다.</b> 화면에서만 숨기면 API를 직접 부를 때 권한 밖의 결함까지 응답에 담기기 때문입니다.</li>
+            <li>결함은 관리자가 임의로 만들 수 없고 로봇이 보낸 관측으로만 생기게 해, 기록을 믿을 수 있게 했습니다.</li>
+            <li>로봇이 올리는 결함 사진의 업로드·조회 API를 새로 만들고, 중복 업로드·파일 위장·용량 초과·위조 링크 등 13가지 경우를 직접 실행해 확인한 뒤 배포했습니다.</li>
+          </ul>
+
+          <h4>관제 화면 — 관리자가 보던 화면을 빼앗지 않게</h4>
+          <ul>
+            <li>API를 부르지 않던 화면을 목록·필터·지도·상세 카드·상태 변경까지 실제 데이터로 연결했습니다. 서버 응답과 1:1로 맞춘 TypeScript 타입을 두어 어긋나면 빌드 단계에서 잡히게 했습니다.</li>
+            <li>새 결함 알림이 오면 <b>그 결함이 지금 보는 지도 밖일 때만</b> 지도를 옮기고, 확대해 둔 화면은 되돌리지 않았습니다. 알림이 관리자가 보던 화면을 빼앗으면 오히려 일을 방해하기 때문입니다.</li>
+            <li>가까운 결함을 묶어 보여 주는 기능은 두 번 고쳤습니다. 누르면 두 단계만 확대돼 같은 묶음이 다시 나오던 것을 고쳤더니, 이번엔 누른 결함 일부가 화면 밖으로 밀려난다는 팀원의 피드백이 왔습니다. 그래서 <b>누른 결함이 모두 담기는 만큼만</b> 확대하게 바꿨습니다.</li>
+            <li>필터 조건을 URL에 담아 새로고침하거나 주소를 공유해도 같은 화면이 나오게 했고, 다시 불러오는 동안에도 이전 목록을 남겨 화면이 깜빡이지 않게 했습니다.</li>
+            <li>Playwright로 결함 화면 E2E 테스트 8개를 작성했습니다.</li>
+          </ul>
+
+          <figure>
+            <img src="assets/img/gilbom-main.png" alt="길봄 실시간 결함 상태 모니터링 화면" loading="lazy" width="2878" height="1531">
+            <figcaption>실시간 결함 모니터링 화면</figcaption>
+          </figure>
+
+          <h4>모니터링 · 백업</h4>
+          <ul>
+            <li>서버·DB·앱 이상을 알리는 알람 39개와 대시보드 4개를 만들어 팀 메신저로 받게 했습니다.</li>
+            <li>만들어지기만 하고 <b>한 번도 복원해 본 적 없던 백업</b>을 임시 DB에 실제로 복원해 12개 항목을 자동으로 확인하는 스크립트를 만들었습니다.</li>
+          </ul>
+
+          <details>
+            <summary>시스템 구조 보기</summary>
+<pre class="arch">브라우저 ── HTTPS ──▶ Nginx ──▶ Spring Boot ──▶ PostgreSQL + PostGIS
+                                  │
+                                  └── SSE ──▶ 관제 화면 (새 결함 알림)
+로봇 ── MQTTS ──▶ Mosquitto ──▶ Spring Boot   (결함 생성)
+로봇 ── HTTPS 사진 업로드 ──▶ Nginx ──▶ Spring Boot</pre>
+          </details>
+        </div>
+      </div>
+    </article>
 
     <!-- 도담 -->
     <article class="project" id="dodam">
@@ -85,39 +141,29 @@
           <dt>기간</dt><dd>2026.08 – 09 (6주)</dd>
           <dt>구분</dt><dd>SSAFY 특화 프로젝트</dd>
           <dt>인원</dt><dd>5명</dd>
-          <dt>역할</dt><dd>인프라·배포 단독<br>백엔드(AI 코치·개선·리포트)<br>부하 테스트</dd>
-          <dt>기술</dt><dd>Spring Boot, MySQL, Redis, Jenkins, Docker, Nginx, k6</dd>
+          <dt>역할</dt><dd>서버(AI 코치·개선 추적·리포트)<br>AWS 인프라·배포 단독</dd>
+          <dt>기술</dt><dd>Spring Boot, MySQL, Redis, OpenAI API, AWS EC2, Jenkins, Docker, k6</dd>
         </dl>
         <div class="main">
-          <h4>배포해도 서비스가 멈추지 않는 파이프라인</h4>
+          <h4>금액을 지어내지 않는 AI 코치</h4>
           <ul>
-            <li>GitLab에 머지되면 Jenkins가 빌드·테스트·배포까지 자동으로 진행합니다.</li>
-            <li>운영 컨테이너를 바꾸기 전에 <b>임시 컨테이너를 먼저 띄워</b> 정상 기동을 확인하고, 실패하면 교체하지 않습니다.</li>
-            <li>배포 후 헬스체크를 두 단계(앱 내부 상태, Nginx를 거친 실제 요청)로 나누고, 실패 시 직전 버전으로 자동 롤백합니다.</li>
-            <li>이후 환경변수 누락과 DB 타입 불일치가 각각 배포될 뻔했지만 모두 <b>중단 없이 차단</b>됐습니다.</li>
+            <li>AI 코치 API 3종을 만들었습니다. LLM에는 서버가 이미 계산한 진단 결과만 넘기고, 이름·계좌·거래 내역은 애초에 읽지 않게 했습니다.</li>
+            <li>답변에 든 숫자를 서버 계산값과 하나씩 맞춰 보고, <b>맞지 않는 숫자가 하나라도 있으면 답변을 버리고</b> 준비해 둔 문장으로 답했습니다. 말투가 조금 딱딱해져도 금액이 틀리는 것은 막아야 했습니다.</li>
+            <li>같은 질문은 Redis에 저장해 둔 답변으로 돌려줘 응답 시간을 <b>2.29초에서 0.11초</b>로 줄였고, 사용자당 시간당 40회로 호출을 제한해 AI 사용료가 갑자기 늘지 않게 했습니다.</li>
+            <li>개선 행동 추적 API 11개와 월간·일간 리포트 API 8개도 맡았습니다.</li>
           </ul>
 
-          <h4>숫자를 지어내지 않는 AI 코치</h4>
+          <h4>잘못된 변경이 올라와도 멈추지 않는 배포</h4>
           <ul>
-            <li>LLM에는 서버가 이미 계산한 진단 결과만 넘기고, 이름·계좌·거래 내역은 애초에 읽지 않도록 했습니다.</li>
-            <li>답변에 나온 숫자를 서버 값과 대조해 <b>출처 없는 숫자가 하나라도 있으면 답변을 버리고</b> 준비된 문장으로 대신합니다.</li>
-            <li>같은 질문은 Redis에 저장된 답변으로 돌려줘 응답 시간을 <b>2.29초에서 0.11초</b>로 줄였습니다.</li>
-            <li>사용자당 시간당 40회로 호출을 제한해 AI 사용료가 갑자기 늘지 않게 했습니다. Redis가 죽어도 제한은 유지됩니다.</li>
+            <li>AWS EC2 서버 구성과 Jenkins 배포 자동화를 혼자 맡았습니다. 코드가 합쳐지면 빌드·테스트·배포가 자동으로 진행됩니다.</li>
+            <li>제가 만든 테이블의 타입이 코드와 어긋나 서비스가 60분 멈춘 뒤, <b>새 버전을 임시로 먼저 띄워 정상 기동을 확인해야만</b> 실제 서버를 교체하게 바꿨습니다. 닷새 뒤 팀원의 DB 변경이 코드와 맞지 않았을 때 이 단계가 배포를 막아 서비스는 멈추지 않았습니다.</li>
+            <li>HTTPS, 로그인 요청 횟수 제한, DB 자동 백업과 복구 리허설, Prometheus·Grafana 모니터링을 갖췄습니다.</li>
           </ul>
 
           <h4>측정으로 찾은 병목</h4>
           <ul>
-            <li>처음엔 DB 커넥션 풀이 부족할 거라고 예상했지만, 측정해 보니 <b>CPU가 먼저 97%까지 차고</b> 50초 뒤에야 풀 대기가 생겼습니다.</li>
-            <li>JFR로 CPU 사용처를 보니 직접 작성한 코드는 0.4%뿐이었고, 대부분 프레임워크 쪽이었습니다.</li>
-            <li>설정 2건(SQL 구문 캐시, 보안 필터 관측 끄기)으로 처리량 <b>+9.4%</b>, 응답 시간 p95 <b>−27%</b>.</li>
-            <li>22분 동안 100만 건을 보낸 지속 부하 테스트에서 실패 0건이었습니다.</li>
-          </ul>
-
-          <h4>운영과 보안</h4>
-          <ul>
-            <li>HTTPS, 방화벽, 로그인 요청 횟수 제한, 컨테이너 비루트 실행을 적용했습니다.</li>
-            <li>DB를 매일 백업하고, 임시 DB에 실제로 복구해 보는 리허설까지 했습니다.</li>
-            <li>Prometheus·Grafana·Loki로 지표와 로그를 모으고, 이상이 생기면 팀 메신저로 알림이 가도록 했습니다.</li>
+            <li>부하 테스트에서 요청이 DB 연결을 기다리며 쌓이자 연결 수 부족을 의심했지만, <b>CPU가 먼저 97%까지 차고</b> 50초 뒤에야 대기가 생겼습니다. 연결 수만 늘렸다면 나아지지 않았을 것입니다.</li>
+            <li>자바 프로파일러로 CPU 사용처를 찾아 코드 수정 없이 설정 두 가지로 처리량 <b>+9.4%</b>. 이후 22분 동안 100만 건을 보낸 테스트에서 실패는 0건이었습니다.</li>
           </ul>
 
           <details>
@@ -126,60 +172,8 @@
                                      ├──▶ SSAFY 금융망
                                      ├──▶ LLM (SSAFY GMS)
                                      └──▶ FCM 푸시
-EC2 1대 · Docker Compose 14개 서비스
-GitLab ──▶ Jenkins ──▶ 빌드·테스트 ──▶ 사전 검증 ──▶ 배포 ──▶ 헬스체크 ──▶ (실패 시) 롤백
-Prometheus · Grafana · Loki ──▶ Mattermost 알림</pre>
-          </details>
-        </div>
-      </div>
-    </article>
-
-    <!-- 길봄 -->
-    <article class="project" id="gilbom">
-      <h3>길봄 — 자율주행 로봇 점자블록 결함 관제</h3>
-      <p class="tagline">로봇이 보행로를 순찰하며 점자블록 파손과 장애물을 찾아 보내면, 관리자가 웹 지도에서 위치·사진을 보고 처리하는 서비스</p>
-      <p class="award">우수상 — 삼성청년SW·AI아카데미 2학기 공통 프로젝트 구미 1반 1등 (2026.08.10)</p>
-      <div class="row">
-        <dl class="facts">
-          <dt>기간</dt><dd>2026.07.06 – 08.10 (6주)</dd>
-          <dt>구분</dt><dd>SSAFY 공통 프로젝트 (AIoT)</dd>
-          <dt>인원</dt><dd>7명</dd>
-          <dt>역할</dt><dd>결함 기능 백엔드·프론트 단독<br>모니터링·백업</dd>
-          <dt>기술</dt><dd>Spring Boot, PostgreSQL + PostGIS, MQTT, React, Playwright, Prometheus</dd>
-        </dl>
-        <div class="main">
-          <h4>결함 기능 — 서버부터 화면까지</h4>
-          <ul>
-            <li>결함 조회·상태 변경 API 11개와, 새 결함을 화면에 바로 띄우는 실시간 알림(SSE)을 만들었습니다.</li>
-            <li>결함은 관리자가 임의로 만들 수 없고 <b>로봇이 보낸 관측으로만 생기게</b> 해 기록을 믿을 수 있게 했습니다.</li>
-            <li>관리자는 자기에게 배정된 로봇의 결함만 보이도록 권한을 DB 조회 단계에서 걸었습니다.</li>
-            <li>항상 실패하던 증거 사진 조회를 새로 만들고, 중복 업로드·파일 위장·용량 초과·위조 링크 등 13가지 경우를 직접 실행해 확인했습니다.</li>
-          </ul>
-
-          <h4>관제 화면</h4>
-          <ul>
-            <li>목업 3장뿐이던 화면을 목록·필터·지도·상세·상태 변경까지 실제 데이터로 연결했습니다.</li>
-            <li>지도를 움직이면 보이는 영역만 다시 불러오고, 가까운 결함은 묶어서 보여 줍니다. 결과가 같으면 마커를 다시 그리지 않아 깜빡임을 없앴습니다.</li>
-            <li>Playwright로 화면 테스트 8개를 작성해 기능이 깨지면 바로 알 수 있게 했습니다.</li>
-          </ul>
-
-          <figure>
-            <img src="assets/img/gilbom-main.png" alt="길봄 실시간 결함 상태 모니터링 화면" loading="lazy" width="2878" height="1531">
-            <figcaption>실시간 결함 모니터링 화면</figcaption>
-          </figure>
-
-          <h4>모니터링 · 백업 · 복원</h4>
-          <ul>
-            <li>서버·DB·앱 이상을 알리는 알람 39개와 대시보드 4개를 만들고, 로그에 남는 민감한 값은 가렸습니다.</li>
-            <li>백업을 암호화해 자동으로 돌리고, <b>한 번도 복원해 본 적 없던 백업</b>을 임시 DB에 복원해 12개 항목을 자동으로 확인하는 스크립트를 만들었습니다.</li>
-            <li>작업 중 DB 장애 알람이 아예 없던 것, 감시 대상이 사라져도 알람이 안 뜨던 것을 발견해 채웠습니다.</li>
-          </ul>
-
-          <details>
-            <summary>시스템 구조 보기</summary>
-<pre class="arch">브라우저 ── HTTPS ──▶ Nginx ──▶ Spring Boot ──▶ PostgreSQL + PostGIS
-로봇 ── MQTTS ──▶ Mosquitto ──▶ Spring Boot
-로봇 ── HTTPS 사진 업로드 ──▶ Nginx ──▶ Spring Boot</pre>
+AWS EC2 · Docker Compose
+GitLab ──▶ Jenkins ──▶ 빌드·테스트 ──▶ 임시 기동 확인 ──▶ 교체 ──▶ 헬스체크 ──▶ (실패 시) 롤백</pre>
           </details>
         </div>
       </div>
@@ -188,27 +182,33 @@ Prometheus · Grafana · Loki ──▶ Mattermost 알림</pre>
     <!-- HobbyKit -->
     <article class="project" id="hobbykit">
       <h3>HobbyKit — AI 취미 키트 추천 커머스</h3>
-      <p class="tagline">취미를 시작하려는 사람에게 대화형 AI가 입문 키트를 추천하고, 매장 비콘·쿠폰·주문까지 이어 주는 Flutter 앱</p>
+      <p class="tagline">취미를 시작하려는 사람에게 대화형 AI가 입문 키트를 추천하고, 매장에 들어오면 비콘으로 쿠폰을 주는 Flutter 앱</p>
       <div class="row">
         <dl class="facts">
           <dt>기간</dt><dd>2026.05 – 06 (5주)</dd>
           <dt>인원</dt><dd>2명</dd>
-          <dt>역할</dt><dd>저장소·인프라 세팅<br>API 게이트웨이<br>AI 추천 서비스</dd>
-          <dt>기술</dt><dd>Node.js, FastAPI, Spring Boot, Qdrant, OpenAI, Flutter, GitHub Actions</dd>
+          <dt>역할</dt><dd>서버 전반, AI 추천<br>비콘 쿠폰 서버·앱 연동<br>저장소·배포 세팅</dd>
+          <dt>기술</dt><dd>Spring Boot, FastAPI, Node.js, Flutter, MySQL, Redis, Qdrant, OpenAI API</dd>
         </dl>
         <div class="main">
-          <h4>AI 키트 추천</h4>
+          <h4>쿠폰은 한 장만 — 제 코드의 틈을 고친 일</h4>
           <ul>
-            <li>질문을 벡터로 바꿔 비슷한 키트를 찾고(Qdrant), 그 결과로 LLM이 답하는 RAG 구조를 만들었습니다.</li>
-            <li>대화 흐름을 보고 <b>지금 추천해도 되는 상황인지 먼저 판단</b>하고, 실제로 파는 키트만 추천하도록 제한했습니다.</li>
-            <li>추천 이유를 세 가지 기준의 비율로 나눠 앱에서 원형 차트로 보여 줍니다.</li>
-            <li>상품 300개·키트 15개 규모의 카탈로그를 만들고, 추천 데이터가 실제 DB와 어긋나지 않게 맞췄습니다.</li>
+            <li>매장 비콘을 감지하면 웰컴 쿠폰을 주는 서버 API와, 앱이 비콘을 감지하면 그 API를 부르는 연동을 맡았습니다.</li>
+            <li>제가 처음 짠 서버 코드는 “이미 받았는지 확인”과 “받았다고 기록”이 따로 나뉘어 있어, <b>요청이 동시에 오면 둘 다 통과해 쿠폰이 두 장 나갈 수 있었습니다.</b> 2주 뒤 이를 찾아 Redis 명령 하나(<code>setIfAbsent</code>)로 합쳐 한 장만 나가게 고쳤고, 쿠폰 저장이 실패하면 기록을 지워 다시 받을 수 있게 했습니다.</li>
+            <li>앱이 발급에 실패해도 쿠폰이 나온 것처럼 보여 주던 것을 “이미 받은 매장”과 “발급 실패, 다시 시도”로 나눠 보여 주게 고쳤습니다.</li>
+            <li>앱이 막아 주더라도, 돈이 걸린 결과는 서버가 스스로 한 번만 보장해야 한다고 배웠습니다. 주문도 같은 이유로 중복 생성을 막는 키(<code>Idempotency-Key</code>)를 두었습니다.</li>
           </ul>
 
-          <h4>서비스 연결과 배포</h4>
+          <h4>AI 키트 추천</h4>
           <ul>
-            <li>앱 요청을 Spring과 AI 서비스로 나눠 보내는 게이트웨이를 만들고 API 문서를 정리했습니다.</li>
-            <li>한쪽 서비스가 느려지거나 죽어도 다른 쪽까지 번지지 않도록 서비스별로 차단기(circuit breaker)를 달았습니다.</li>
+            <li>질문과 비슷한 키트를 벡터 검색(Qdrant)으로 찾고, 그 결과로 LLM이 답하는 RAG 구조를 만들었습니다.</li>
+            <li>대화 흐름을 보고 지금 추천해도 되는 상황인지 먼저 판단하고, <b>실제로 판매 중인 키트만</b> 추천하게 제한했습니다.</li>
+            <li>추천 이유를 세 가지 기준의 비율로 나눠 앱에서 원형 차트로 보여 줍니다.</li>
+          </ul>
+
+          <h4>서비스 연결</h4>
+          <ul>
+            <li>앱 요청을 Spring과 AI 서비스로 나눠 보내는 게이트웨이를 만들고, 한쪽이 죽어도 다른 쪽까지 번지지 않게 서비스별 차단기(circuit breaker)를 달았습니다.</li>
             <li><code>docker compose up</code> 한 번으로 12개 서비스가 뜨게 구성하고, GitHub Actions로 PR마다 테스트와 빌드를 돌렸습니다.</li>
           </ul>
         </div>
@@ -217,21 +217,20 @@ Prometheus · Grafana · Loki ──▶ Mattermost 알림</pre>
 
     <!-- 들락날룸 -->
     <article class="project" id="roomtrade">
-      <h3>들락날룸 — 교육생 양도 마켓 MVP</h3>
-      <p class="tagline">SSAFY 구미 교육생끼리 원룸·생활물품·교재를 넘겨주고 받는 마켓</p>
+      <h3>들락날룸 — 교육생 양도 마켓</h3>
+      <p class="tagline">SSAFY 구미 교육생끼리 원룸·생활물품·교재를 넘겨주고 받는 웹 서비스 MVP</p>
       <div class="row">
         <dl class="facts">
           <dt>기간</dt><dd>2026.05 (1주)</dd>
           <dt>인원</dt><dd>4명</dd>
           <dt>역할</dt><dd>로그인 인증, 지도, 사진 업로드</dd>
-          <dt>기술</dt><dd>FastAPI, MySQL, React, Kakao Map</dd>
+          <dt>기술</dt><dd>React, TypeScript, FastAPI, MySQL, Kakao Map</dd>
         </dl>
         <div class="main">
           <ul>
-            <li>회원가입·로그인을 백엔드부터 화면까지 맡았습니다. 비밀번호는 bcrypt로 저장하고 JWT로 로그인 상태를 유지합니다.</li>
+            <li>회원가입·로그인을 서버부터 React 화면까지 맡았습니다. 비밀번호는 bcrypt로 저장하고 JWT로 로그인 상태를 유지합니다.</li>
             <li>토큰이 <b>만료된 경우와 위조된 경우를 구분</b>해, 화면에서 재로그인 안내와 오류 처리를 따로 할 수 있게 했습니다.</li>
             <li>카카오 지도를 필요할 때만 불러오고, 여러 번 불러와도 한 번만 로드되게 했습니다.</li>
-            <li>게시글 사진 업로드와 팀 공용 ERD를 작성했습니다.</li>
           </ul>
           <figure>
             <img src="assets/img/roomtrade-list.png" alt="들락날룸 게시글 목록 화면" loading="lazy" width="3248" height="1968">
@@ -248,17 +247,17 @@ Prometheus · Grafana · Loki ──▶ Mattermost 알림</pre>
       <div class="row">
         <dl class="facts">
           <dt>기간</dt><dd>2025.03 – 06</dd>
-          <dt>구분</dt><dd>SUNY Korea CSE416 (Software Engineering)</dd>
+          <dt>구분</dt><dd>Stony Brook CSE416 (Software Engineering)</dd>
           <dt>인원</dt><dd>3명</dd>
           <dt>역할</dt><dd>Google 로그인, 알림, 기록 화면</dd>
           <dt>기술</dt><dd>React, TypeScript, FastAPI, Supabase</dd>
         </dl>
         <div class="main">
           <ul>
-            <li>Google OAuth 로그인을 프론트와 백엔드 양쪽에서 구현했습니다.</li>
+            <li>Google OAuth 로그인을 React와 FastAPI 양쪽에서 구현했습니다.</li>
             <li>집중 기록 캘린더와 딴짓 기록 목록·상세(감지 순간 캡처 포함) 화면을 만들었습니다.</li>
             <li>“다른 탭에 있으면 알림을 못 본다”는 피드백을 받고, <b>브라우저가 뒤에 있어도 뜨는 데스크톱 알림</b>과 알림음을 추가했습니다.</li>
-            <li>요구사항 정의서, 유스케이스, 테스트 케이스, 버그 리포트 등 정식 개발 문서를 영어로 작성하며 진행했습니다.</li>
+            <li>요구사항 정의서, 유스케이스, 테스트 케이스, 버그 리포트 등 개발 문서를 영어로 작성하며 진행했습니다.</li>
           </ul>
         </div>
       </div>
@@ -270,25 +269,24 @@ Prometheus · Grafana · Loki ──▶ Mattermost 알림</pre>
     <h2>트러블슈팅</h2>
 
     <div class="case">
-      <h3>60분 서비스 중단, 그리고 재발 방지</h3>
-      <p class="where">도담 · 2026.09</p>
+      <h3>지도 묶음을 누르면 가끔 로그인이 풀리던 문제</h3>
+      <p class="where">길봄 · 2026.08</p>
       <dl>
-        <dt>증상</dt><dd>배포 후 백엔드가 뜨지 않아 약 60분 동안 서비스가 멈췄습니다.</dd>
-        <dt>원인</dt><dd>DB 마이그레이션은 컬럼을 <code>CHAR(7)</code>로 만들었는데, 코드(엔티티)는 <code>VARCHAR(7)</code>을 기대하고 있었습니다.</dd>
-        <dt>해결</dt><dd>엔티티 타입을 DB에 맞췄습니다. 여기서 끝내지 않고 코드 쪽 465개 컬럼과 DB 쪽 502개 컬럼을 자동으로 대조하는 테스트를 만들고, 배포 전 사전 검증 단계를 추가했습니다.</dd>
-        <dt>결과</dt><dd>5일 뒤 다른 팀원의 같은 유형 실수가 사전 검증에 걸려 <b>서비스 중단 없이</b> 막혔습니다.</dd>
+        <dt>증상</dt><dd>결함 지도의 묶음을 누르면 가끔 로그인 화면으로 튕겼습니다. 개발자도구를 보니 지도 조회 API가 간헐적으로 401을 내고 있었습니다.</dd>
+        <dt>시도</dt><dd>한꺼번에 나가는 요청이 원인이라고 보고 요청을 하나로 줄였지만, 로그인은 그대로 풀렸습니다. 그 뒤로는 추측으로 고치기를 멈추고, 인증이 실패하는 순간과 로그인 기록이 지워지는 과정을 따라갈 수 있게 로그부터 넣었습니다.</dd>
+        <dt>원인</dt><dd>서버가 로그인 기록을 지운 게 아니라, 브라우저의 로그인 쿠키가 서버에 없는 값으로 바뀌어 있었습니다. 결함 사진을 불러오는 API가 응답마다 새 쿠키를 내려보냈고, 사진 여러 장을 동시에 받으면 마지막에 도착한 응답의 쿠키가 남았습니다. 그래서 매번이 아니라 가끔만 풀렸습니다.</dd>
+        <dt>해결</dt><dd>인증·사진 API·서버 앞단 모두 다른 팀원의 담당이었지만, 확인한 원인과 로그를 갖춰 넘겼습니다. Nginx에서 사진 요청에 쿠키가 오가지 않게 막아 급한 불을 끄고, 근본 원인인 사진 API도 수정을 요청했습니다. 이후 더 이상 로그인이 풀리지 않았습니다.</dd>
       </dl>
     </div>
 
     <div class="case">
-      <h3>지도 묶음을 누르면 로그인이 풀리던 문제</h3>
-      <p class="where">길봄 · 2026.08</p>
+      <h3>60분 서비스 중단, 그리고 같은 실수를 막는 배포</h3>
+      <p class="where">도담 · 2026.09</p>
       <dl>
-        <dt>증상</dt><dd>결함 지도에서 묶음을 클릭하면 가끔 로그인 화면으로 튕겼습니다.</dd>
-        <dt>시도</dt><dd>요청이 몰려서라고 보고 요청 수를 줄였고, 다음엔 인증 필터를 의심해 고쳤지만 둘 다 원인이 아니었습니다.</dd>
-        <dt>전환</dt><dd>추측을 멈추고 <b>원인을 구분할 수 있는 로그부터</b> 심었습니다. 쿠키가 안 왔는지, 왔는데 세션이 없는지를 가를 수 있게 했습니다.</dd>
-        <dt>원인</dt><dd>사진을 불러오는 API가 응답마다 새 로그인 쿠키를 내려보내, 사진 여러 장을 동시에 받으면 기존 쿠키가 덮어써지고 있었습니다.</dd>
-        <dt>해결</dt><dd>분석 결과와 로그를 담당자들에게 공유해 Nginx에서의 쿠키 차단과 API 수정을 나눠 진행했습니다.</dd>
+        <dt>증상</dt><dd>배포 후 서버가 뜨지 않아 약 60분 동안 서비스가 멈췄습니다.</dd>
+        <dt>원인</dt><dd>제가 만든 월간 리포트 테이블의 컬럼이 DB에서는 <code>CHAR(7)</code>, 코드에서는 <code>VARCHAR(7)</code>이라 기동 시 검증에 실패했습니다. 당시 배포는 기존 서버를 먼저 내리는 구조라 되돌릴 버전도 없었습니다.</dd>
+        <dt>해결</dt><dd>타입을 맞춘 뒤, 코드와 DB의 컬럼 타입을 자동 대조하는 테스트를 만들고 새 버전을 임시로 먼저 띄워 확인하는 단계를 배포에 넣었습니다.</dd>
+        <dt>결과</dt><dd>닷새 뒤 팀원의 같은 유형 실수가 이 단계에 걸려 <b>서비스 중단 없이</b> 막혔습니다.</dd>
       </dl>
     </div>
 
@@ -296,17 +294,8 @@ Prometheus · Grafana · Loki ──▶ Mattermost 알림</pre>
       <h3>설정은 했는데 한 번도 동작하지 않던 로그인 횟수 제한</h3>
       <p class="where">도담 · 2026.09</p>
       <dl>
-        <dt>원인</dt><dd>Nginx에 <code>/api/auth/</code> 경로로 설정했지만 실제 경로는 <code>/api/v1/auth/</code>였습니다.</dd>
-        <dt>해결</dt><dd>경로를 고친 뒤 직접 요청을 보내 12번째부터 차단되는 것을 확인했습니다. 설정했다는 것과 동작한다는 것은 다르다는 걸 배웠습니다.</dd>
-      </dl>
-    </div>
-
-    <div class="case">
-      <h3>데이터가 늘자 매번 실패로 뜨던 백업</h3>
-      <p class="where">도담 · 2026.09</p>
-      <dl>
-        <dt>원인</dt><dd>백업 검증용 <code>zcat | grep -q</code>에서 grep이 먼저 끝나면 zcat이 SIGPIPE로 종료되고, <code>pipefail</code> 때문에 전체가 실패 처리됐습니다. 파일이 작을 땐 드러나지 않던 문제였습니다.</dd>
-        <dt>해결</dt><dd>파일 끝의 완료 표시만 확인하도록 바꾸고, 실패 시 남는 임시 파일도 정리 대상에 넣었습니다.</dd>
+        <dt>원인</dt><dd>Nginx에 <code>/api/auth/</code> 경로로 걸었지만 실제 경로는 <code>/api/v1/auth/</code>였습니다. 설정 파일만 보면 멀쩡했습니다.</dd>
+        <dt>해결</dt><dd>경로를 고친 뒤 직접 요청을 보내 12번째부터 차단되는 것을 확인했습니다. 그 뒤로는 보안 설정도 켜 두는 데서 끝내지 않고 실제로 막히는지 확인합니다.</dd>
       </dl>
     </div>
   </section>
@@ -314,13 +303,20 @@ Prometheus · Grafana · Loki ──▶ Mattermost 알림</pre>
   <!-- 학력·경력 -->
   <section class="sec about" id="about">
     <h2>학력 · 경력 · 활동</h2>
-    <div class="row"><span class="side">2026 –</span><div><h3>삼성청년SW·AI아카데미 (SSAFY) 15기</h3><p>공통 프로젝트 우수상 (구미 1반 1등, 2026.08)</p></div></div>
+    <div class="row"><span class="side">2026.01 –</span><div><h3>삼성청년SW·AI아카데미 (SSAFY) 15기</h3><p>상반기 925시간 교육 (Spring·DB·Android 등) 후 팀 프로젝트 4개 진행</p></div></div>
     <div class="row"><span class="side">2025.08 – 2025.10</span><div><h3>인턴 · AI 챗봇 MVP 개발</h3><p>기존 웹 서비스와 연동되는 AI 챗봇 웹페이지를 프론트엔드·백엔드·배포까지 혼자 개발하고, 연동 서비스 개발자와 협의해 인터페이스를 설계했습니다. (보안서약으로 세부 내용 비공개)</p></div></div>
-    <div class="row"><span class="side">2025.02 – 2025.11</span><div><h3>Teaching Assistant · Stony Brook CSE316</h3><p>풀스택 수업(React·Node.js·MySQL) 조교로 두 학기 활동, 두 번째 학기에는 30여 명을 혼자 담당했습니다.</p></div></div>
+    <div class="row"><span class="side">2025.02 – 2025.11</span><div><h3>Teaching Assistant · Stony Brook CSE316</h3><p>React·Node.js·MySQL 풀스택 수업 조교로 두 학기 활동했고, 두 번째 학기에는 30여 명을 혼자 맡았습니다. 교수님이 과제를 공개하기 전에 직접 풀어 보며 헷갈리는 요구사항을 찾아 전달하는 일도 맡았습니다.</p></div></div>
     <div class="row"><span class="side">2025.01 – 2025.02</span><div><h3>Research Assistant · SUNY Korea</h3><p>도메인 시프트·샘플링 기법 관련 머신러닝 연구 보조</p></div></div>
     <div class="row"><span class="side">2023.03 – 2023.05</span><div><h3>SUNY Korea Computing Society 회장</h3><p>해커톤·동문 세미나 기획, 주간 스터디 운영</p></div></div>
     <div class="row"><span class="side">2022.08 – 2025.12</span><div><h3>Stony Brook University (SUNY Korea)</h3><p>Computer Science 학사 · Cum Laude 졸업 · Dean's List · GPA 3.54 / 4.0</p></div></div>
-    <div class="row"><span class="side">자격·어학</span><div><p>정보처리기사 (2026.09) · TOEIC 935 (2026.05) · TOEIC Speaking AM (2025.11)</p></div></div>
+  </section>
+
+  <section class="sec about">
+    <h2>수상 · 자격</h2>
+    <div class="row"><span class="side">2026.08</span><div><h3>우수상 · 삼성전자</h3><p>삼성청년SW·AI아카데미 2학기 공통 프로젝트 구미 1반 1등 (길봄)</p></div></div>
+    <div class="row"><span class="side">2026.09</span><div><h3>정보처리기사</h3></div></div>
+    <div class="row"><span class="side">2026.05</span><div><h3>TOEIC 935</h3></div></div>
+    <div class="row"><span class="side">2025.11</span><div><h3>TOEIC Speaking AM (180)</h3></div></div>
   </section>
 
   <footer>© 2026 김지우 · <a href="https://github.com/Jiwoo-Kim0" target="_blank" rel="noopener">github.com/Jiwoo-Kim0</a></footer>
