@@ -214,3 +214,13 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+/* award / misc */
+.ov-card .award, .award-line {
+  font-size: .82rem; font-weight: 700; color: var(--warn);
+}
+.award-line { margin: 10px 0 0; font-size: .92rem; }
+.award-line b { color: var(--text); }
+.side-h { font-size: .95rem; margin: 0 0 10px; color: var(--muted); }
+.certs + .side-h { margin-top: 22px; }
+.nda { display: inline-block; margin-left: 4px; font-size: .75rem; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
