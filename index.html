@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김지우 · Portfolio</title>
+  <meta name="description" content="백엔드·인프라 개발자 김지우의 포트폴리오 — 도담, 길봄, HobbyKit, 들락날룸, nagAI">
+  <meta property="og:title" content="김지우 · Portfolio">
+  <meta property="og:description" content="측정으로 원인을 찾고, 다시 일어나지 않게 만드는 백엔드·인프라 개발자">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">김지우</a>
+    <ul>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#troubleshooting">Troubleshooting</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="테마 전환">☾</button>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Backend · Infra · DevOps</div>
+      <h1>추측 대신 <span class="hl">측정</span>으로 원인을 찾고,<br>같은 문제가 <span class="hl">다시 일어나지 않게</span> 만듭니다.</h1>
+      <p class="lead">
+        Spring Boot 백엔드와 Docker·Jenkins 기반 인프라를 주로 다룹니다.
+        배포 파이프라인, 관측(모니터링·로그·알람), 백업·복구처럼 서비스가 <b>멈추지 않게</b> 하는 일과,
+        LLM이 지어낸 숫자를 걸러내는 것처럼 <b>틀리지 않게</b> 하는 일에 관심이 많습니다.
+      </p>
+      <div class="links">
+        <a class="btn primary" href="#projects">프로젝트 보기</a>
+        <a class="btn" href="https://github.com/Jiwoo-Kim0" target="_blank" rel="noopener">GitHub · Jiwoo-Kim0</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>+9.4%</b><span>처리량 개선 · 자바 코드 변경 0줄 (도담)</span></div>
+        <div class="stat"><b>1,003,064</b><span>22분 지속 부하 요청 · 실패 0%</span></div>
+        <div class="stat"><b>2.29s → 0.11s</b><span>AI 코치 응답 · Redis 캐시</span></div>
+        <div class="stat"><b>0분</b><span>사전 검증 도입 후 잘못된 배포로 인한 중단</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SKILLS -->
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Skills</div>
+        <h2>기술 스택</h2>
+        <p>프로젝트에서 직접 설계·구현·운영해 본 것만 적었습니다.</p>
+      </div>
+      <div class="skills">
+        <div class="skill reveal">
+          <h3>Backend</h3>
+          <ul class="tags"><li>Java 21</li><li>Spring Boot 3.5</li><li>Spring Security</li><li>JPA</li><li>JdbcTemplate</li><li>Flyway</li><li>FastAPI</li><li>Node.js / Express</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>Data</h3>
+          <ul class="tags"><li>MySQL 8</li><li>PostgreSQL + PostGIS</li><li>Redis (Lua)</li><li>MongoDB</li><li>Qdrant</li><li>SQLAlchemy / Alembic</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>Infra &amp; DevOps</h3>
+          <ul class="tags"><li>AWS EC2</li><li>Docker Compose</li><li>Nginx</li><li>Jenkins</li><li>GitHub Actions</li><li>Let's Encrypt</li><li>systemd</li><li>ufw / fail2ban</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>Observability &amp; Perf</h3>
+          <ul class="tags"><li>Prometheus</li><li>Grafana</li><li>Loki / Alloy / Promtail</li><li>Alertmanager</li><li>k6</li><li>JFR</li><li>Micrometer</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>Frontend</h3>
+          <ul class="tags"><li>React 19</li><li>TypeScript</li><li>Vite</li><li>Playwright</li><li>SSE</li><li>Flutter</li></ul>
+        </div>
+        <div class="skill reveal">
+          <h3>AI</h3>
+          <ul class="tags"><li>OpenAI API</li><li>RAG</li><li>임베딩·벡터 검색</li><li>출력 검증 가드</li><li>Gemini Vision</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS OVERVIEW -->
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Projects</div>
+        <h2>프로젝트</h2>
+        <p>팀 저장소의 git 이력에서 <b>제 커밋과 변경 파일만</b> 추려 정리했습니다.</p>
+      </div>
+
+      <div class="overview">
+        <a class="ov-card reveal" href="#dodam">
+          <span class="meta">2026.09 · 4주 · 5명 · SSAFY 특화</span>
+          <h3>도담 Dodam</h3>
+          <p>소비·자산을 분석해 목표 달성을 돕는 청년 AI 금융 코치 앱</p>
+          <span class="role">인프라·CI/CD 단독 · AI 코치·리포트 BE · 부하 테스트</span>
+        </a>
+        <a class="ov-card reveal" href="#gilbom">
+          <span class="meta">2026.07–08 · 4.5주 · 7명 · SSAFY 공통</span>
+          <h3>길봄 GILBOM</h3>
+          <p>자율주행 로봇이 찾은 점자블록 결함을 실시간 관제하는 웹 서비스</p>
+          <span class="role">결함 도메인 풀스택 · 관측·백업 인프라</span>
+        </a>
+        <a class="ov-card reveal" href="#hobbykit">
+          <span class="meta">2026.05–06 · 5주 · 4명</span>
+          <h3>HobbyKit</h3>
+          <p>대화형 AI가 취미 입문 키트를 추천하는 커머스 앱</p>
+          <span class="role">API 게이트웨이 · RAG 추천 AI · CI/CD (팀 커밋 71%)</span>
+        </a>
+        <a class="ov-card reveal" href="#roomtrade">
+          <span class="meta">2026.05 · 1주 · 4명</span>
+          <h3>들락날룸</h3>
+          <p>SSAFY 교육생끼리 원룸·생활물품을 양도하는 마켓 MVP</p>
+          <span class="role">JWT 인증 · 카카오 지도 · 이미지 업로드</span>
+        </a>
+        <a class="ov-card reveal" href="#nagai">
+          <span class="meta">2025.03–06 · 3개월 · 3명 · SUNY Korea CSE416</span>
+          <h3>nagAI</h3>
+          <p>웹캠으로 딴짓을 감지해 알려 주는 집중력 관리 웹 서비스</p>
+          <span class="role">Google OAuth · 알림 · 기록 화면</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DODAM -->
+  <section class="wrap">
+    <article class="project" id="dodam">
+      <div class="p-head reveal">
+        <div>
+          <div class="eyebrow">01 · SSAFY 15기 특화 프로젝트</div>
+          <h3>도담 Dodam — 청년 AI 금융 코치</h3>
+          <p class="sub">사용자의 자산·소비 흐름을 분석해 목표 달성을 방해하는 금융 비효율을 찾고, AI 코치가 쉬운 말로 설명하며 개선 행동을 추적하는 Android 앱.</p>
+          <ul class="chips"><li>Infra 단독</li><li>BE — AI 코치 · 개선 · 리포트</li><li>부하 테스트 · 성능</li><li>QA 취합</li></ul>
+        </div>
+        <img class="logo" src="assets/img/dodam-logo.png" alt="도담 로고" width="88" height="88">
+      </div>
+
+<pre class="arch reveal" aria-label="도담 시스템 구조">Android (Expo / React Native)
+        │ HTTPS
+        ▼
+Nginx (TLS · rate limit) ──▶ Spring Boot API ──▶ MySQL 8 / Redis 7
+                                 ├──▶ SSAFY 금융망
+                                 ├──▶ LLM (SSAFY GMS · gpt-5.4-mini)
+                                 └──▶ FCM
+EC2 1대 · Docker Compose 14개 서비스
+GitLab ─webhook─▶ Jenkins ─▶ 빌드·테스트 ▶ 사전 검증 ▶ 배포 ▶ 2단계 헬스체크 ▶ 자동 롤백
+Prometheus · Grafana · Loki ─▶ Mattermost 알림</pre>
+
+      <div class="metrics reveal">
+        <div class="metric"><b>+9.4%</b><span>누적 처리량 (설정 2건)</span></div>
+        <div class="metric"><b>p95 −27%</b><span>사용자 여정 2.01s → 1.47s</span></div>
+        <div class="metric"><b>795.8 req/s</b><span>22분 지속 부하 · 실패 0%</span></div>
+        <div class="metric"><b>0.11s</b><span>AI 코치 캐시 응답 (기존 2.29s)</span></div>
+        <div class="metric"><b>465 ↔ 502</b><span>엔티티·DDL 컬럼 자동 대조</span></div>
+      </div>
+
+      <div class="p-grid">
+        <div class="card reveal">
+          <h4><span class="n">A</span>무중단 배포 파이프라인</h4>
+          <ul>
+            <li>GitLab webhook → Jenkins → Build &amp; Test → Deploy 구축 (<code>deploy.sh</code> 346줄)</li>
+            <li><b>배포 전 사전 검증</b>: 일회용 컨테이너로 기동을 확인한 뒤에만 운영 컨테이너 교체</li>
+            <li>헬스체크 2단계 — readiness(DB·Redis 포함) + nginx 경유 end-to-end. MySQL을 <code>docker pause</code>해 두 체크가 다르게 반응함을 확인하고 분리</li>
+            <li>롤백 지점은 <b>healthy일 때만</b> 갱신, 실패 시 이전 이미지로 자동 복귀</li>
+            <li><code>check-env.sh</code>로 <code>application.yml</code>이 요구하는 변수를 compose가 실제로 넘기는지 대조</li>
+            <li>효과: 이후 환경변수 누락·스키마 불일치 배포를 <b>서비스 중단 없이 차단</b></li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h4><span class="n">B</span>“서버가 계산한 숫자로만 말하는” AI 코치</h4>
+          <ul>
+            <li>코치 API 3종. 계산이 끝난 진단·추천 결과만 읽고 이름·계좌·거래 테이블은 <b>아예 읽지 않도록</b> 설계</li>
+            <li><code>CoachNumberGuard</code> — 응답의 모든 숫자를 서버 사실과 대조, <b>출처 없는 숫자가 하나라도 있으면 폐기</b></li>
+            <li>송신 직전 민감정보 검사, 실패 시 <code>200 + source=TEMPLATE</code>로 무중단 응답 (사유 6종 구분)</li>
+            <li>Redis 캐시 키에 프롬프트 버전 + facts SHA-256 → 데이터가 바뀌면 TTL 없이 자동 무효화</li>
+            <li>사용자별 호출 예산(시간당 40건) — Lua로 INCR+EXPIRE 원자화, Redis 장애 시 인프로세스 카운터로 전환</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h4><span class="n">C</span>병목은 커넥션 풀이 아니라 CPU였다</h4>
+          <ul>
+            <li>k6 부하 테스트 12회, 기록 문서 1,432줄</li>
+            <li>“1순위 커넥션 풀”로 예측했으나 CPU가 먼저 97% 포화되고 <b>50초 뒤에야</b> 풀 대기 발생, MySQL은 한가 → 풀 부족은 2차 증상</li>
+            <li>JFR 프로파일링: 자사 코드는 CPU의 0.4%, 나머지는 프레임워크 계층</li>
+            <li>PreparedStatement 캐시 +5.7%, Spring Security Observation 비활성화로 <b>누적 +9.4%</b></li>
+            <li>autocommit 해제는 테스트 1,388개 중 323개 실패 → 안전망 없이 적용하지 않고 <b>철회</b>, 순서를 제안</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h4><span class="n">D</span>보안 하드닝 · 백업 · 관측</h4>
+          <ul>
+            <li>보안 방침을 문서로 먼저 정의 — 범위 밖 항목(KMS·WAF 등)도 이유와 함께 명문화</li>
+            <li>Jenkins UI를 <code>127.0.0.1</code>에만 바인딩(webhook만 노출), 비루트·<code>cap_drop: ALL</code> 컨테이너</li>
+            <li>백업은 임시 DB 복구가 기본, 운영 DB 덮어쓰기는 3중 확인. 백업→복구 리허설 실시</li>
+            <li>Prometheus·Grafana·Loki + exporter, 대시보드 4종, cron heartbeat로 <b>“조용히 멈춘 cron”</b>까지 감지</li>
+            <li>개선 행동 API 11개 · 리포트 API 8개 (동시 생성은 비관적 잠금으로 직렬화)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="contrib">Java 21 · Spring Boot 3.5 · MySQL · Redis · Jenkins · Docker · Nginx · k6 · JFR — 커밋 330건 / 전체 1,164건</p>
+    </article>
+
+    <!-- GILBOM -->
+    <article class="project" id="gilbom">
+      <div class="p-head reveal">
+        <div>
+          <div class="eyebrow">02 · SSAFY 15기 공통 프로젝트</div>
+          <h3>길봄 GILBOM — 점자블록 결함 관제</h3>
+          <p class="sub">자율주행 로봇이 보행로를 순찰하며 점자블록 파손·미설치와 장애물을 탐지하고, 관제 웹에서 위치·사진·로봇 상태를 실시간으로 확인하는 서비스.</p>
+          <ul class="chips"><li>결함 도메인 BE+FE 단독</li><li>관측·백업·복원 인프라</li><li>팀 운영(Jira·스크럼)</li></ul>
+        </div>
+        <img class="logo" src="assets/img/gilbom-logo.png" alt="길봄 로고" width="88" height="88">
+      </div>
+
+      <figure class="shot reveal">
+        <img src="assets/img/gilbom-main.png" alt="길봄 실시간 결함 상태 모니터링 화면 — 네이버 지도 위 결함 분포" loading="lazy" width="2878" height="1531">
+        <figcaption>실시간 결함 상태 모니터링 — 결함 목록·필터·지도·상세 카드 화면을 직접 구현</figcaption>
+      </figure>
+
+<pre class="arch reveal" aria-label="길봄 시스템 구조">Browser ──HTTPS──▶ Nginx ──/api──▶ Spring Boot ──▶ PostgreSQL + PostGIS
+Robot   ──MQTTS 8883──────────▶ Mosquitto ──────▶ Backend
+Robot   ──HTTPS 이미지 업로드──▶ Nginx ──────────▶ Backend  (X-API-Key · 서명 URL)</pre>
+
+      <div class="metrics reveal">
+        <div class="metric"><b>11 + SSE</b><span>결함 REST API · 실시간 스트림</span></div>
+        <div class="metric"><b>39개</b><span>Prometheus 알람 규칙</span></div>
+        <div class="metric"><b>12항목</b><span>복원 리허설 자동 검사</span></div>
+        <div class="metric"><b>8 스펙</b><span>Playwright E2E</span></div>
+        <div class="metric"><b>36%</b><span>팀 커밋 비중 (278 / 767)</span></div>
+      </div>
+
+      <div class="p-grid">
+        <div class="card reveal">
+          <h4><span class="n">A</span>결함 API · 이미지 저장소</h4>
+          <ul>
+            <li>명세서에서 계약을 추출해 결함 API 11개 + SSE(<code>defect.created/updated</code>) 구현</li>
+            <li>결함은 <b>로봇이 보낸 관측으로만 생성</b>되게 설계, 배정 로봇 기준 객체 범위를 SQL 레벨에서 적용</li>
+            <li>항상 503이던 증거 이미지 조회를 업로드·서명 URL로 새로 구현 — 멱등 업로드, MIME 위장 415, 크기 초과 413, 만료/위조 토큰 401 등 <b>13개 계약 케이스를 실행으로 검증</b></li>
+            <li>Flyway 마이그레이션 6종, 전체 스위트 703 tests / 0 failures</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h4><span class="n">B</span>관제 프론트엔드</h4>
+          <ul>
+            <li>React 19 + TS. 목업 3장뿐이던 화면을 목록·필터·지도·상세·상태 변경까지 실데이터로 연결</li>
+            <li>뷰포트 bbox 재조회 + 마커 클러스터링, 결과가 같으면 이전 배열 유지해 <b>지도 깜빡임 제거</b></li>
+            <li>클러스터 클릭 시 <code>ceil(log2(격자/최근접 쌍 거리))</code>로 갈릴 만큼만 확대</li>
+            <li>CSP(인라인 스타일 금지) 아래 드래그 카드·줌 컨트롤 직접 구현, listbox 접근성 고르개</li>
+          </ul>
+        </div>
+        <div class="card full reveal">
+          <h4><span class="n">C</span>운영 관측 · 백업 · 복원</h4>
+          <ul>
+            <li>Micrometer → Prometheus 알람 39개 → Alertmanager → Mattermost, Grafana 대시보드 4장, Loki/Alloy 로그에 <code>requestId</code>와 <b>민감값 마스킹</b></li>
+            <li>GPG 공개키 다중 수신자 암호화 백업 + manifest·checksum, systemd timer 3종, auditd</li>
+            <li><b>한 번도 복원해 본 적 없던 백업</b>을 임시 DB·볼륨에 복원해 12개 항목을 자동 검사하는 <code>restore-drill.sh</code>로 처음 검증</li>
+            <li>운영 반영 중 직접 찾은 사각지대: DB health 알람 부재, 감시 대상 소실(<code>up</code>) 미감지, off-host 반출 안 된 백업 무알람</li>
+          </ul>
+        </div>
+      </div>
+      <p class="contrib">Java 21 · Spring Boot · PostgreSQL/PostGIS · MQTT · React 19 · Playwright · Prometheus · Loki · GPG</p>
+    </article>
+
+    <!-- HOBBYKIT -->
+    <article class="project" id="hobbykit">
+      <div class="p-head reveal">
+        <div>
+          <div class="eyebrow">03 · 팀 프로젝트 · 저장소 생성자</div>
+          <h3>HobbyKit — AI 취미 키트 추천 커머스</h3>
+          <p class="sub">취미 입문자에게 대화형 AI가 키트를 추천하고, 매장 비콘·쿠폰·주문까지 잇는 Flutter 커머스 앱. 게이트웨이 뒤에 Spring과 FastAPI AI 서비스를 둔 구조.</p>
+          <ul class="chips"><li>API Gateway</li><li>RAG 추천 AI</li><li>CI/CD · 컨테이너화</li><li>팀 커밋 71%</li></ul>
+        </div>
+      </div>
+
+<pre class="arch reveal" aria-label="HobbyKit 시스템 구조">Flutter ──▶ Node.js Gateway (:3000, circuit breaker) ─┬─▶ Spring Boot (상품·주문·쿠폰)
+                                                     └─▶ FastAPI AI ──▶ Qdrant · OpenAI
+MySQL · MongoDB · Redis · InfluxDB + Grafana + k6   — docker compose up 한 번으로 12개 서비스</pre>
+
+      <div class="p-grid">
+        <div class="card reveal">
+          <h4><span class="n">A</span>RAG 기반 키트 추천</h4>
+          <ul>
+            <li>임베딩 → Qdrant 벡터 검색 → LLM 응답 파이프라인, SSE 스트리밍</li>
+            <li>대화 이력으로 <b>“지금 추천해도 되는 상황인지”</b>부터 판단, <b>실존 DB 키트만</b> 추천하도록 제약</li>
+            <li>추천 근거(의미·카테고리·키워드 적합도)를 합 100%로 정규화해 앱에서 파이차트로 표시(XAI)</li>
+            <li>Qdrant 시드를 하드코딩 → 실제 DB 기준으로 전환, 카탈로그 상품 300 / 키트 15 구축</li>
+            <li>API 키 없이도 fake 임베딩으로 동작 → 로컬·CI에서 외부 의존 없이 실행</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h4><span class="n">B</span>게이트웨이 · 장애 격리 · CI</h4>
+          <ul>
+            <li>Express 게이트웨이 라우트 전체 + <code>openapi.yaml</code> / Swagger UI</li>
+            <li><code>opossum</code> 서킷 브레이커를 서비스별로 분리 — 실패율 50%·최소 5건 판정·15초 후 HALF_OPEN</li>
+            <li>타임아웃 분리: Spring 10초, LLM이 순차 2회 호출되는 FastAPI 60초</li>
+            <li>GitHub Actions: Flutter analyze·test, 서비스별 이미지 빌드, <code>cancel-in-progress</code></li>
+            <li>주문 <code>Idempotency-Key</code> 중복 방지, BLE 비콘 매장 감지 → 쿠폰</li>
+          </ul>
+        </div>
+      </div>
+      <p class="contrib">Node.js · FastAPI · Spring Boot · Qdrant · OpenAI · Flutter · MySQL · MongoDB · Redis · GitHub Actions — 커밋 49건 / 전체 69건</p>
+    </article>
+
+    <!-- ROOM TRADE -->
+    <article class="project" id="roomtrade">
+      <div class="p-head reveal">
+        <div>
+          <div class="eyebrow">04 · 1주 MVP</div>
+          <h3>들락날룸 — 교육생 양도 마켓플레이스</h3>
+          <p class="sub">SSAFY 구미 교육생끼리 원룸·생활물품·교재를 양도하는 마켓 MVP. 게시글 등록 → 찜 → 채팅 → 내 게시글 관리까지 한 흐름으로 묶고 모바일까지 대응.</p>
+          <ul class="chips"><li>JWT 인증 BE+FE</li><li>카카오 지도</li><li>이미지 업로드</li><li>ERD</li></ul>
+        </div>
+      </div>
+      <figure class="shot reveal">
+        <img src="assets/img/roomtrade-list.png" alt="들락날룸 게시글 목록 화면" loading="lazy" width="3248" height="1968">
+        <figcaption>게시글 목록 — 카테고리·거래 상태 필터와 위치 표시</figcaption>
+      </figure>
+      <div class="p-grid">
+        <div class="card reveal">
+          <h4><span class="n">A</span>인증 축을 끝까지</h4>
+          <ul>
+            <li>bcrypt 해시 + <code>checkpw</code> 검증, python-jose HS256 액세스 토큰(60분)</li>
+            <li><b>토큰 만료와 위조를 별도 예외로 분리</b> — 클라이언트가 “재로그인”과 “잘못된 요청”을 구분</li>
+            <li>라우트·스키마·모델·Alembic 마이그레이션·로그인/회원가입 화면까지 한 축으로 구현</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h4><span class="n">B</span>지도 · 이미지</h4>
+          <ul>
+            <li>카카오 맵 SDK를 런타임에 동적 로드하는 Promise 래퍼 — <code>autoload=false</code>, 중복 삽입 방지, 실패 경로 분리</li>
+            <li>Cloudinary 게시글 사진 업로드</li>
+            <li>팀 스키마 합의 기준이 된 ERD 작성</li>
+          </ul>
+        </div>
+      </div>
+      <p class="contrib">FastAPI · SQLAlchemy · MySQL · React 19 · TanStack Query · Kakao Map · Cloudinary</p>
+    </article>
+
+    <!-- NAGAI -->
+    <article class="project" id="nagai">
+      <div class="p-head reveal">
+        <div>
+          <div class="eyebrow">05 · SUNY Korea CSE416 Software Engineering</div>
+          <h3>nagAI — 웹캠 AI 집중력 추적</h3>
+          <p class="sub">포모도로 타이머와 Gemini Vision 기반 실시간 딴짓 감지를 결합한 집중력 관리 웹 서비스. PRD·Use Case·Data Design·Test Case·Bug Report까지 정식 SDLC 산출물을 갖춰 영어로 진행.</p>
+          <ul class="chips"><li>Google OAuth</li><li>데스크톱 알림</li><li>로그 화면</li><li>Docker</li></ul>
+        </div>
+        <img class="logo dark" src="assets/img/nagai-logo.png" alt="nagAI 로고" width="88" height="88">
+      </div>
+      <div class="p-grid">
+        <div class="card reveal">
+          <h4><span class="n">A</span>담당 기능</h4>
+          <ul>
+            <li>Google OAuth 로그인 — 프론트 <code>@react-oauth/google</code> + 백엔드 토큰 검증·JWT</li>
+            <li>집중 기록 캘린더(키보드 ←/→ 월 이동), 딴짓 로그 표·상세(캡처 이미지)·페이지네이션</li>
+            <li>포모도로 일시정지/재개, 프론트·백엔드 Dockerfile과 compose</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h4><span class="n">B</span>사용자 피드백에서 출발한 개선</h4>
+          <ul>
+            <li>“다른 탭에 있으면 못 본다” → <b>비활성 탭에서도 도착하는 데스크톱 알림</b>과 알림음</li>
+            <li>상세 로그를 닫았다 다시 열면 깨지던 버그를 백엔드 스키마까지 함께 수정</li>
+            <li>Vercel(FE) · Render(BE) 실배포</li>
+          </ul>
+        </div>
+      </div>
+      <p class="contrib">React 19 · TypeScript · FastAPI · Supabase · Gemini 1.5 Flash · Docker — 커밋 102건 / 전체 536건</p>
+    </article>
+  </section>
+
+  <!-- TROUBLESHOOTING -->
+  <section class="block" id="troubleshooting">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Troubleshooting</div>
+        <h2>원인까지 따라간 사례</h2>
+        <p>증상을 덮는 데서 멈추지 않고, 같은 유형을 다시 막는 장치까지 만든 기록입니다.</p>
+      </div>
+
+      <details class="ts reveal" open>
+        <summary>도담 · 60분 서비스 중단 → 재발 방지 3중 장치</summary>
+        <div class="body">
+          <dl class="flow">
+            <dt class="bad">증상</dt><dd>백엔드 기동 실패로 약 60분 서비스 중단. 기존 컨테이너를 먼저 교체하는 구조라 롤백이 서비스를 지키지 못했음</dd>
+            <dt>원인</dt><dd>V38 마이그레이션이 <code>CHAR(7)</code>로 만든 컬럼을 엔티티는 <code>varchar(7)</code>로 기대 → Hibernate <code>validate</code> 실패</dd>
+            <dt>해결</dt><dd><code>columnDefinition="CHAR(7)"</code>로 맞추고 <code>validate</code>는 유지</dd>
+            <dt>재발 방지</dt><dd>① DB 없이 엔티티 465개·DDL 502개 컬럼을 대조하는 <code>SchemaTypeConsistencyTest</code> ② 일회용 컨테이너 사전 검증 ③ healthy일 때만 롤백 지점 갱신</dd>
+            <dt class="ok">효과</dt><dd>5일 뒤 다른 팀원의 V42 타입 불일치를 <b>사전 검증이 차단, 중단 0분</b>. 적용된 V42는 체크섬 때문에 V43으로 전진 수정</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="ts reveal">
+        <summary>길봄 · 지도 묶음을 누르면 로그인이 풀리던 간헐적 장애</summary>
+        <div class="body">
+          <dl class="flow">
+            <dt class="bad">증상</dt><dd>결함 지도의 클러스터를 클릭하면 간헐적 401과 함께 로그인 화면으로 튕김</dd>
+            <dt>가설 1</dt><dd>동시 요청 20개 폭주 → 배치 조회 1회로 축소. <b>해결되지 않음</b></dd>
+            <dt>가설 2</dt><dd>인증 필터가 한 번의 거부로 세션을 삭제 → 수정했으나 거부 로그가 한 줄도 없었음. <b>헛다리</b></dd>
+            <dt>전환</dt><dd>추측을 멈추고 <b>원인을 가를 수 있는 로그부터</b> 심음 (<code>sessionCookie</code>/<code>cookieValid</code>/<code>liveSession</code>, 세션 삭제 트리거 <code>RAISE LOG</code>). 식별자는 남기지 않고 <code>requestId</code>로만 특정</dd>
+            <dt>원인</dt><dd>증거 이미지 API가 응답마다 새 세션 쿠키를 발급 → 동시 이미지 응답이 <b>관리자 쿠키를 덮어쓰는 경쟁 조건</b></dd>
+            <dt class="ok">해결</dt><dd>분석과 로그를 공유해 Nginx 엣지 양방향 쿠키 차단 + 이미지 API 수정 + 엣지 계약 테스트를 각 담당자와 나눠 해결</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="ts reveal">
+        <summary>도담 · “설정했다”와 “동작한다”는 다르다 — 로그인 레이트 리밋 0회 매칭</summary>
+        <div class="body">
+          <dl class="flow">
+            <dt class="bad">증상</dt><dd>로그인·가입 레이트 리밋이 배포 이후 한 번도 적용되지 않음</dd>
+            <dt>원인</dt><dd><code>^~ /api/auth/</code>로 걸었지만 실제 경로는 <code>/api/v1/auth/</code></dd>
+            <dt class="ok">해결</dt><dd>정규식 location으로 login·signup만 지정(refresh·logout 의도적 제외), 캠퍼스망 IP 공유를 고려해 20r/m. <b>12번째 요청부터 429를 실측</b></dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="ts reveal">
+        <summary>도담 · 배포 파이프라인이 Jenkins 자신을 죽임</summary>
+        <div class="body">
+          <dl class="flow">
+            <dt class="bad">증상</dt><dd>배포 중 Jenkins 컨테이너가 <code>Exited 143</code>으로 종료</dd>
+            <dt>원인</dt><dd>① <code>compose up --build</code> 전체 실행이 jenkins까지 재빌드 ② nginx의 <code>depends_on: jenkins</code>가 재생성을 유발</dd>
+            <dt class="ok">해결</dt><dd>배포 대상에서 jenkins 제외 + <code>--no-deps</code>. depends_on 제거 후 nginx 기동 실패를 막기 위해 <code>resolver 127.0.0.11</code> + 변수형 <code>proxy_pass</code>로 요청 시점 DNS 해석</dd>
+          </dl>
+        </div>
+      </details>
+
+      <details class="ts reveal">
+        <summary>도담 · 덤프가 커지자 백업이 매번 “실패”</summary>
+        <div class="body">
+          <dl class="flow">
+            <dt class="bad">증상</dt><dd>시드 적재로 덤프가 8.7KB → 8.1MB가 된 뒤부터 백업이 매번 실패 처리</dd>
+            <dt>원인</dt><dd>검증의 <code>zcat | grep -q</code>에서 grep이 먼저 끝나 zcat이 SIGPIPE(141) → <code>pipefail</code>로 실패. 남은 <code>.partial</code>은 정리 대상에서도 빠져 있었음</dd>
+            <dt class="ok">해결</dt><dd><code>tail -3</code>으로 <code>Dump completed</code> 확인, <code>.partial</code>도 보관 정리 대상에 포함</dd>
+          </dl>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">About</div>
+        <h2>교육 · 활동 · 자격</h2>
+      </div>
+      <div class="two-col">
+        <ol class="timeline reveal">
+          <li>
+            <div class="when">2026 —</div>
+            <h3>SSAFY 15기</h3>
+            <p>HobbyKit · 들락날룸 · 길봄(공통) · 도담(특화) 프로젝트</p>
+          </li>
+          <li>
+            <div class="when">2025.02 – 2025.11</div>
+            <h3>SBU Teaching Assistant · CSE316</h3>
+            <p>풀스택 수업(React·Node.js·MySQL) 조교 두 학기, 두 번째 학기 30여 명 단독 담당. 과제 공개 전 직접 풀어 헷갈릴 요구사항을 미리 찾아 보완</p>
+          </li>
+          <li>
+            <div class="when">2025.01 – 2025.02</div>
+            <h3>Research Assistant · SUNY Korea</h3>
+            <p>도메인 시프트·샘플링 기법 관련 머신러닝 연구 보조 — 모델 학습, 하이퍼파라미터 조정, 실험 기록</p>
+          </li>
+          <li>
+            <div class="when">2023.03 – 2023.05</div>
+            <h3>SUNY Korea Computing Society 회장</h3>
+            <p>해커톤·동문 세미나 등 행사 기획·운영, 매주 정기 스터디 진행</p>
+          </li>
+          <li>
+            <div class="when">2022.08 – 2025.12</div>
+            <h3>Stony Brook University (SUNY Korea)</h3>
+            <p>Computer Science 학사 · Dean's List · GPA 3.54 / 4.0</p>
+          </li>
+        </ol>
+        <div class="reveal">
+          <ul class="certs">
+            <li>정보처리기사 <span>2026.09</span></li>
+            <li>TOEIC 935 <span>2026.05</span></li>
+            <li>TOEIC Speaking AM (180) <span>2025.11</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 김지우 (Jiwoo Kim)</span>
+    <a href="https://github.com/Jiwoo-Kim0" target="_blank" rel="noopener">github.com/Jiwoo-Kim0</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
