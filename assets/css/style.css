@@ -166,3 +166,58 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 56px; color: var(--f
   details { display: none; }
   body { font-size: 11pt; }
 }
+
+/* slogan */
+.intro .slogan { font-size: 1.5rem; line-height: 1.45; font-weight: 700; margin: 0 0 8px; letter-spacing: -.015em; max-width: 720px; }
+.intro .name { font-size: 1rem; color: var(--sub); margin: 0 0 28px; }
+.goals { margin: 20px 0 0; display: grid; grid-template-columns: 110px 1fr; gap: 6px 20px; max-width: 720px; }
+.goals dt { color: var(--faint); font-size: .92rem; padding-top: 2px; }
+.goals dd { margin: 0; }
+@media (max-width: 560px) { .goals { grid-template-columns: 1fr; gap: 0; } .goals dd { margin-bottom: 8px; } }
+
+/* skill levels */
+.skill-group + .skill-group { margin-top: 28px; }
+.skill-group > h3 { font-size: .95rem; color: var(--faint); margin: 0 0 10px; font-weight: 600; }
+.skill-item { display: grid; grid-template-columns: 200px 1fr; gap: 4px 40px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.skill-item:first-of-type { border-top: 1px solid var(--line); }
+.skill-item .name { font-weight: 700; }
+.skill-item .lv { display: block; font-size: .85rem; color: var(--faint); font-weight: 400; margin-top: 2px; }
+.dots { display: inline-flex; gap: 3px; vertical-align: middle; margin-right: 6px; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--text); display: inline-block; }
+.dots i.on { background: var(--text); }
+.skill-item p { margin: 0; }
+.skill-note { font-size: .88rem; color: var(--faint); margin: 14px 0 0; }
+@media (max-width: 760px) { .skill-item { grid-template-columns: 1fr; gap: 2px; } }
+
+/* project sub-blocks */
+.overview-box { background: var(--tint); border-radius: 6px; padding: 16px 20px; margin-bottom: 8px; }
+.overview-box p { margin: 0 0 6px; }
+.overview-box p:last-child { margin: 0; }
+.overview-box b { font-weight: 700; }
+.kw { color: var(--sub); font-size: .95rem; }
+
+table.t { width: 100%; border-collapse: collapse; font-size: .93rem; margin: 8px 0 4px; }
+table.t th, table.t td { text-align: left; vertical-align: top; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--line); }
+table.t th { font-weight: 600; color: var(--faint); font-size: .85rem; border-bottom: 1.5px solid var(--text); }
+table.t td:first-child { font-weight: 700; white-space: nowrap; padding-right: 16px; }
+table.t td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.t-wrap { overflow-x: auto; }
+@media (max-width: 640px) {
+  table.t.stack thead { display: none; }
+  table.t.stack tr { display: block; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  table.t.stack td { display: block; border: 0; padding: 2px 0; white-space: normal; }
+  table.t.stack td::before { content: attr(data-l) " · "; color: var(--faint); font-size: .82rem; font-weight: 400; }
+  table.t.stack td:first-child::before { content: none; }
+}
+
+.ba { font-variant-numeric: tabular-nums; }
+.ba s { color: var(--faint); text-decoration: none; }
+.ba .arrow { color: var(--faint); margin: 0 6px; }
+
+.retro { border-left: 3px solid var(--line); padding: 2px 0 2px 16px; margin-top: 8px; }
+.retro p { margin: 0 0 10px; }
+.retro p:last-child { margin: 0; }
+.retro b { font-weight: 700; }
+
+/* problem 4-cell */
+.case table.t td:first-child { width: 80px; color: var(--faint); font-weight: 600; font-size: .88rem; }

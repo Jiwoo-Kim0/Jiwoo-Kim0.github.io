@@ -21,50 +21,77 @@
     <button class="theme-btn" id="theme-btn" type="button">다크 모드</button>
   </div>
 
-  <!-- 소개 -->
+  <!-- 프로필 -->
   <header class="intro">
-    <h1>김지우 <small>Jiwoo Kim</small></h1>
-    <p class="role">웹 서비스 개발자 · React / Spring Boot</p>
+    <h1 class="slogan">화면부터 서버, 배포까지<br>한 기능을 끝까지 책임지는 웹 개발자 김지우입니다.</h1>
+    <p class="name">Jiwoo Kim · React / Spring Boot</p>
     <p>
-      React와 Spring Boot로 한 기능을 화면부터 서버까지 만들고, 배포한 뒤 장애 원인을 찾는 일까지 맡아 왔습니다.
-      기능을 만들기 전에 <b>틀리면 안 되는 것</b>이 무엇인지부터 정합니다. 권한 밖의 데이터가 나가지 않는 것,
-      AI가 금액을 지어내지 않는 것, 쿠폰이 두 장 나가지 않는 것 같은 일입니다.
+      기능을 만들기 전에 <b>틀리면 안 되는 것</b>부터 정합니다. 권한 밖의 데이터가 응답에 담기지 않는 것,
+      AI가 금액을 지어내지 않는 것, 쿠폰이 두 장 나가지 않는 것처럼요. 그리고 그것이 실제로 지켜지는지
+      테스트와 배포 단계에서 확인합니다. 설정해 둔 것과 실제로 동작하는 것은 다르다는 걸 프로젝트마다 겪었기 때문입니다.
     </p>
-    <p>
-      삼성청년SW·AI아카데미(SSAFY) 15기 상반기에 Spring·DB·Android를 배웠고, 이후 팀 프로젝트 두 개(길봄·도담)를 진행했습니다.
-      공통 프로젝트 <b>길봄</b>으로 반 1등 우수상을 받았습니다.
-    </p>
+    <dl class="goals">
+      <dt>가장 깊이 다룬 것</dt><dd>Spring Boot API와 React 화면을 한 기능 단위로 잇는 일 — 권한, 실시간 알림(SSE), 동시 요청 처리</dd>
+      <dt>단기 목표</dt><dd>WEB 서비스에서 제가 만든 기능은 배포와 장애 원인 찾기까지 책임지는 것</dd>
+      <dt>중장기 목표</dt><dd>Android 앱을 서버와 함께 다뤄, 고객사의 서비스를 화면부터 서버까지 맡을 수 있는 엔지니어</dd>
+    </dl>
     <div class="contact">
       <a href="https://github.com/Jiwoo-Kim0" target="_blank" rel="noopener">GitHub</a>
+      <a href="#skills">기술</a>
       <a href="#projects">프로젝트</a>
-      <a href="#troubleshooting">트러블슈팅</a>
-      <a href="#about">학력·경력</a>
+      <a href="#troubleshooting">문제 해결</a>
+      <a href="#about">이력</a>
     </div>
   </header>
 
-  <!-- 요약 -->
-  <section class="sec">
-    <h2>요약</h2>
-    <ul class="highlights">
-      <li><b>화면부터 서버까지</b> — 길봄에서 결함 기능의 Spring Boot API 11개와 React 목록·지도·상세 화면을 혼자 만들었고, 새 결함은 실시간 알림(SSE)으로 화면에 바로 띄웠습니다.</li>
-      <li><b>틀리면 안 되는 것부터</b> — 권한은 화면에서 가리지 않고 DB 조회 단계에서 걸렀습니다. AI 코치 답변의 숫자는 서버 계산값과 대조해 하나라도 다르면 버렸고, 쿠폰은 요청이 동시에 와도 한 장만 나가게 고쳤습니다.</li>
-      <li><b>배포와 운영</b> — 도담에서 AWS EC2 서버와 Jenkins 배포 자동화를 혼자 맡았습니다. 배포 전에 새 버전을 임시로 띄워 확인하게 한 뒤로는, 잘못된 변경이 올라와도 서비스가 멈추지 않았습니다.</li>
-      <li><b>AI 활용 개발</b> — LLM 금융 코치 API(도담)와 RAG 기반 키트 추천(HobbyKit)을 만들었습니다.</li>
-      <li><b>수상 · 자격</b> — SSAFY 공통 프로젝트 우수상, 정보처리기사, TOEIC 935</li>
-    </ul>
-  </section>
-
   <!-- 기술 -->
-  <section class="sec">
-    <h2>기술</h2>
-    <dl class="skills">
-      <div class="row"><dt>Web Frontend</dt><dd>React, TypeScript, Vite, Playwright(E2E 테스트)</dd></div>
-      <div class="row"><dt>Web Backend</dt><dd>Java 21, Spring Boot 3.5, Spring Security, JPA, Flyway · FastAPI, Node.js(Express)</dd></div>
-      <div class="row"><dt>Mobile</dt><dd>Flutter(비콘 쿠폰 앱·서버 연동) · Android(SSAFY 교육 240시간)</dd></div>
-      <div class="row"><dt>DBMS</dt><dd>MySQL, PostgreSQL + PostGIS, Redis, MongoDB</dd></div>
-      <div class="row"><dt>AWS · 운영</dt><dd>AWS EC2, Docker Compose, Nginx, Jenkins, GitHub Actions, Prometheus, Grafana, k6</dd></div>
-      <div class="row"><dt>AI</dt><dd>OpenAI API, RAG(임베딩·Qdrant 벡터 검색), LLM 출력 검증</dd></div>
-    </dl>
+  <section class="sec" id="skills">
+    <h2>기술 스킬</h2>
+
+    <div class="skill-group">
+      <h3>주요 기술</h3>
+      <div class="skill-item">
+        <div class="name">Java · Spring Boot<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>3 / 5</span></div>
+        <p>정해진 구조 안에서 도메인 API를 설계부터 테스트까지 주도적으로 구현합니다. Spring Security 권한 처리, JPA·JdbcTemplate 조회, 트랜잭션 커밋 이후 이벤트 발행, 비관적 잠금, Flyway 마이그레이션을 프로젝트에서 직접 다뤘습니다.</p>
+      </div>
+      <div class="skill-item">
+        <div class="name">React · TypeScript<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>3 / 5</span></div>
+        <p>여러 화면을 API와 연결하고 실시간 갱신·지도·필터 상태를 다룹니다. 서버 응답과 1:1로 맞춘 타입, URL에 담은 필터 상태, Playwright E2E 테스트를 작성했습니다. 전역 상태 관리 라이브러리는 아직 실무 수준으로 써 보지 않았습니다.</p>
+      </div>
+      <div class="skill-item">
+        <div class="name">Docker · Nginx · Jenkins · AWS EC2<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>3 / 5</span></div>
+        <p>EC2 한 대 위에 Docker Compose 서비스를 구성하고 Jenkins 배포 파이프라인, HTTPS, 요청 횟수 제한, 모니터링을 갖춰 운영할 수 있습니다. 여러 서버에 걸친 구성이나 Kubernetes는 다뤄 보지 않았습니다.</p>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>보조 기술</h3>
+      <div class="skill-item">
+        <div class="name">MySQL · PostgreSQL<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>3 / 5</span></div>
+        <p>테이블 설계와 마이그레이션 작성, 권한 조건을 SQL <code>EXISTS</code>로 거는 조회, 백업·복원을 해 봤습니다.</p>
+      </div>
+      <div class="skill-item">
+        <div class="name">Redis<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>3 / 5</span></div>
+        <p>답변 캐시, <code>setIfAbsent</code>로 중복 발급 막기, Lua 스크립트로 원자적 호출 카운터를 만들었습니다.</p>
+      </div>
+      <div class="skill-item">
+        <div class="name">Prometheus · Grafana · k6<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>2 / 5</span></div>
+        <p>알람 규칙과 대시보드를 만들고, 부하 테스트 시나리오를 작성해 병목을 측정했습니다.</p>
+      </div>
+      <div class="skill-item">
+        <div class="name">Python · FastAPI<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>2 / 5</span></div>
+        <p>AI 추천 서비스와 JWT 로그인 API를 만들었습니다.</p>
+      </div>
+      <div class="skill-item">
+        <div class="name">Android · Flutter<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>2 / 5</span></div>
+        <p>삼성청년SW·AI아카데미에서 Android를 240시간 배웠고, Flutter 앱에서 비콘 감지 후 서버 API를 부르는 연동을 맡았습니다. 앱 화면 전체를 직접 만들어 출시해 본 적은 없습니다.</p>
+      </div>
+      <div class="skill-item">
+        <div class="name">LLM API · RAG<span class="lv"><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>2 / 5</span></div>
+        <p>OpenAI API로 코치 답변과 벡터 검색 기반 추천을 만들고, 답변을 검증하는 단계를 설계했습니다.</p>
+      </div>
+    </div>
+    <p class="skill-note">숙련도는 5단계 기준입니다. 3 = 정해진 구조 안에서 설계부터 테스트까지 주도적으로 구현, 2 = 프로젝트에서 한 기능을 만들어 본 수준.</p>
   </section>
 
   <!-- 프로젝트 -->
@@ -72,7 +99,7 @@
     <h2>프로젝트</h2>
     <ul class="index">
       <li><span class="when">2026.07 – 08 · 6주</span><span><a href="#gilbom">길봄</a> <span class="desc">— 점자블록 결함 관제 웹 · 우수상</span></span></li>
-      <li><span class="when">2026.08 – 09 · 6주</span><span><a href="#dodam">도담</a> <span class="desc">— 청년 AI 금융 코치 Android 앱</span></span></li>
+      <li><span class="when">2026.08 – 09 · 6주</span><span><a href="#dodam">도담</a> <span class="desc">— 청년 AI 금융 코치 앱</span></span></li>
       <li><span class="when">2026.05 – 06 · 5주</span><span><a href="#hobbykit">HobbyKit</a> <span class="desc">— AI 취미 키트 추천 커머스 앱</span></span></li>
       <li><span class="when">2026.05 · 1주</span><span><a href="#roomtrade">들락날룸</a> <span class="desc">— 교육생 양도 마켓 웹</span></span></li>
       <li><span class="when">2025.03 – 06 · 3개월</span><span><a href="#nagai">nagAI</a> <span class="desc">— 웹캠 AI 집중력 관리 웹</span></span></li>
@@ -81,32 +108,38 @@
     <!-- 길봄 -->
     <article class="project" id="gilbom">
       <h3>길봄 — 자율주행 로봇 점자블록 결함 관제</h3>
-      <p class="tagline">로봇이 보행로를 순찰하며 깨진 점자블록을 찾아 보내면, 관리자가 웹 지도에서 위치와 사진을 보고 처리 상태를 관리하는 서비스</p>
-      <p class="award">우수상 — 삼성청년SW·AI아카데미 2학기 공통 프로젝트 구미 1반 1등 (2026.08.10)</p>
+      <p class="tagline">로봇이 찾은 점자블록 결함을 관리자가 웹 지도에서 확인하고 처리하는 관제 서비스</p>
+      <p class="award">우수상 — 삼성청년SW·AI아카데미 2학기 팀 프로젝트 구미 1반 1등 (삼성전자, 2026.08.10)</p>
       <div class="row">
         <dl class="facts">
           <dt>기간</dt><dd>2026.07.06 – 08.10 (6주)</dd>
-          <dt>구분</dt><dd>SSAFY 공통 프로젝트 (AIoT)</dd>
+          <dt>구분</dt><dd>삼성청년SW·AI아카데미 팀 프로젝트 (AIoT)</dd>
           <dt>인원</dt><dd>7명</dd>
-          <dt>역할</dt><dd>결함 기능 API·화면 단독<br>모니터링·백업</dd>
+          <dt>내 역할</dt><dd>결함 기능 API·화면 단독<br>모니터링·백업</dd>
           <dt>기술</dt><dd>Spring Boot, React, TypeScript, PostgreSQL + PostGIS, SSE, Playwright</dd>
+          <dt>기여</dt><dd>팀 커밋 278 / 767 (36%)</dd>
         </dl>
         <div class="main">
-          <h4>결함 API — 볼 수 있는 것만 나가게</h4>
-          <ul>
-            <li>Spring Boot로 결함 조회·상태 변경·병합·내보내기 API 11개와 실시간 알림 스트림(SSE)을 만들었습니다.</li>
-            <li>관리자는 자기에게 배정된 로봇의 결함만 봐야 했습니다. 팀과 논의해 <b>화면에서 가리는 대신 DB 조회 단계에서 걸렀습니다.</b> 화면에서만 숨기면 API를 직접 부를 때 권한 밖의 결함까지 응답에 담기기 때문입니다.</li>
-            <li>결함은 관리자가 임의로 만들 수 없고 로봇이 보낸 관측으로만 생기게 해, 기록을 믿을 수 있게 했습니다.</li>
-            <li>로봇이 올리는 결함 사진의 업로드·조회 API를 새로 만들고, 중복 업로드·파일 위장·용량 초과·위조 링크 등 13가지 경우를 직접 실행해 확인한 뒤 배포했습니다.</li>
-          </ul>
+          <h4>개요</h4>
+          <div class="overview-box">
+            <p><b>배경</b> 점자블록이 깨지거나 빠진 곳은 시각장애인에게 위험하지만, 사람이 보행로를 돌며 찾기엔 범위가 넓습니다.</p>
+            <p><b>목표</b> 순찰 로봇이 찾은 결함을 관리자가 위치·사진과 함께 바로 보고 처리 상태를 관리하게 합니다.</p>
+            <p class="kw">결함 목록·필터 · 지도 마커·묶음 · 실시간 알림 · 증거 사진 · 처리 상태 관리 · 권한별 조회 범위</p>
+          </div>
 
-          <h4>관제 화면 — 관리자가 보던 화면을 빼앗지 않게</h4>
+          <h4>역할과 핵심 기여</h4>
           <ul>
-            <li>API를 부르지 않던 화면을 목록·필터·지도·상세 카드·상태 변경까지 실제 데이터로 연결했습니다. 서버 응답과 1:1로 맞춘 TypeScript 타입을 두어 어긋나면 빌드 단계에서 잡히게 했습니다.</li>
-            <li>새 결함 알림이 오면 <b>그 결함이 지금 보는 지도 밖일 때만</b> 지도를 옮기고, 확대해 둔 화면은 되돌리지 않았습니다. 알림이 관리자가 보던 화면을 빼앗으면 오히려 일을 방해하기 때문입니다.</li>
-            <li>가까운 결함을 묶어 보여 주는 기능은 두 번 고쳤습니다. 누르면 두 단계만 확대돼 같은 묶음이 다시 나오던 것을 고쳤더니, 이번엔 누른 결함 일부가 화면 밖으로 밀려난다는 팀원의 피드백이 왔습니다. 그래서 <b>누른 결함이 모두 담기는 만큼만</b> 확대하게 바꿨습니다.</li>
-            <li>필터 조건을 URL에 담아 새로고침하거나 주소를 공유해도 같은 화면이 나오게 했고, 다시 불러오는 동안에도 이전 목록을 남겨 화면이 깜빡이지 않게 했습니다.</li>
-            <li>Playwright로 결함 화면 E2E 테스트 8개를 작성했습니다.</li>
+            <li><b>결함 API 11개 + 실시간 스트림(SSE)</b> — 조회·상태 변경·병합·내보내기. 결함은 로봇이 보낸 관측으로만 생기게 해 관리자가 임의로 만들거나 지울 수 없게 했습니다.</li>
+            <li><b>권한별 조회 범위</b> — 관리자는 배정된 로봇의 결함만 봐야 했습니다. 팀과 논의해 화면에서 가리는 대신 DB 조회 단계에서 걸렀습니다.</li>
+            <li><b>결함 관제 화면 전체</b> — API를 부르지 않던 화면을 목록·필터·지도·상세 카드·상태 변경까지 실제 데이터로 연결했습니다.
+              <ul>
+                <li>새 결함 알림이 오면 지금 보는 지도 밖일 때만 옮기고, 확대해 둔 화면은 되돌리지 않았습니다.</li>
+                <li>묶음 확대는 누르면 같은 묶음이 다시 나오던 것을 고친 뒤, 팀원 피드백을 받아 <b>누른 결함이 모두 담기는 만큼만</b> 확대하게 한 번 더 고쳤습니다.</li>
+              </ul>
+            </li>
+            <li><b>증거 사진 업로드·조회</b> — 구현이 없어 항상 503이던 사진 조회를 새로 만들었습니다.</li>
+            <li><b>테스트</b> — 백엔드 테스트 파일 18개(실제 PostGIS를 띄운 권한 범위 통합 테스트 포함)와 Playwright E2E 스펙 8개를 작성했습니다. E2E는 네 번 연속 돌려 흔들림이 없는지 확인했습니다.</li>
+            <li><b>모니터링·백업</b> — 알람 규칙과 로그 수집을 잇고, 암호화 백업과 복원 리허설을 만들었습니다.</li>
           </ul>
 
           <figure>
@@ -114,20 +147,42 @@
             <figcaption>실시간 결함 모니터링 화면</figcaption>
           </figure>
 
-          <h4>모니터링 · 백업</h4>
-          <ul>
-            <li>서버·DB·앱 이상을 알리는 알람 39개와 대시보드 4개를 만들어 팀 메신저로 받게 했습니다.</li>
-            <li>만들어지기만 하고 <b>한 번도 복원해 본 적 없던 백업</b>을 임시 DB에 실제로 복원해 12개 항목을 자동으로 확인하는 스크립트를 만들었습니다.</li>
-          </ul>
+          <h4>기술 선택과 구현</h4>
+          <div class="t-wrap">
+          <table class="t stack">
+            <thead><tr><th>기술</th><th>선택 이유 · 검토한 대안</th><th>구현</th></tr></thead>
+            <tbody>
+              <tr><td>SQL <code>EXISTS</code> 권한 조건</td><td data-l="이유">리뷰에서 행마다 Java로 거르는 <code>canView()</code>를 권했지만, 그러면 전체 개수와 페이지가 틀어지고 N+1이 생깁니다. 결함은 여러 로봇의 관측이 합쳐져 로봇 하나로 판정할 수도 없었습니다.</td><td data-l="구현">목록·집계는 SQL 조건으로, 실시간 알림은 건별 판정으로 같은 규칙을 적용</td></tr>
+              <tr><td>SSE</td><td data-l="이유">팀 API 계약에 정해진 방식. 대신 알림 내용을 그대로 믿지 않도록 설계했습니다.</td><td data-l="구현">DB 커밋 후에만 발행, 받는 사람마다 권한 재판정. 화면은 알림을 “다시 조회” 신호로 쓰고 400ms 모아서 한 번, 재연결 시 전체 재조회, 연결 상태 상시 표시</td></tr>
+              <tr><td>서명 URL (HMAC-SHA256)</td><td data-l="이유"><code>&lt;img&gt;</code>에는 인증 헤더를 붙일 수 없고, 개발·운영 서버의 주소가 달라 쿠키에 기대기 어려웠습니다.</td><td data-l="구현">이미지 ID를 서명에 포함하고 만료를 둔 링크. 로봇 업로드는 API Key로 인증하는 별도 보안 필터 체인</td></tr>
+              <tr><td>API Key 해시 SHA-256</td><td data-l="이유">Argon2도 검토했지만, 키가 서버가 만든 32바이트 난수라 사전 공격 대상이 아니고 매 요청마다 검증하는 경로라 의도적 지연이 곧 처리량 손실이었습니다.</td><td data-l="구현">로봇당 활성 키 1개를 DB 부분 unique index로 보장</td></tr>
+              <tr><td>직접 만든 마커 묶기</td><td data-l="이유">네이버 지도의 묶기 모듈은 별도 스크립트라 보안 정책(CSP)의 스크립트 허용 범위를 새로 열어야 했습니다.</td><td data-l="구현">화면 픽셀 44px 격자로 묶고, 보이는 영역(bbox)만 다시 조회</td></tr>
+              <tr><td>GPG 공개키 암호화 백업</td><td data-l="이유">서버에 개인키를 두지 않아, 서버가 털려도 백업은 열 수 없게 하려고</td><td data-l="구현">개인키가 섞이면 스크립트가 거부, 수신자 2명</td></tr>
+            </tbody>
+          </table>
+          </div>
 
-          <details>
-            <summary>시스템 구조 보기</summary>
-<pre class="arch">브라우저 ── HTTPS ──▶ Nginx ──▶ Spring Boot ──▶ PostgreSQL + PostGIS
-                                  │
-                                  └── SSE ──▶ 관제 화면 (새 결함 알림)
-로봇 ── MQTTS ──▶ Mosquitto ──▶ Spring Boot   (결함 생성)
-로봇 ── HTTPS 사진 업로드 ──▶ Nginx ──▶ Spring Boot</pre>
-          </details>
+          <h4>성과</h4>
+          <div class="t-wrap">
+          <table class="t">
+            <thead><tr><th>항목</th><th>전</th><th>후</th></tr></thead>
+            <tbody>
+              <tr><td>증거 사진 조회</td><td>항상 503</td><td>13개 계약 경우 통과 (중복 업로드·파일 위장·용량 초과·위조 링크 등)</td></tr>
+              <tr><td>묶음 클릭 시 요청</td><td class="num">20개</td><td class="num">1개</td></tr>
+              <tr><td>백엔드 테스트 (팀 전체)</td><td class="num">507개</td><td class="num">834개, 실패 0 유지</td></tr>
+              <tr><td>장애 알람</td><td>없음</td><td>규칙 37개, 발화·전달·해소 왕복 6건 실패 0</td></tr>
+              <tr><td>백업 복원</td><td>한 번도 확인 안 됨</td><td>DB 41개 테이블 해시 일치, 사진 9건 일치</td></tr>
+              <tr><td>결과</td><td colspan="2">구미 1반 1등 우수상</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4>회고</h4>
+          <div class="retro">
+            <p><b>남은 한계</b> 결함 내보내기는 요청만 쌓이고 처리하는 작업자가 없어 끝내 완성하지 못했고, E2E 테스트도 CI에 연결하지 못해 사람이 직접 돌려야 했습니다. 권한 조건이 목록 쿼리와 실시간 판정 두 곳에 있어, 규칙이 바뀌면 둘 다 고쳐야 하는 구조도 남았습니다.</p>
+            <p><b>개선 방안</b> 권한 규칙을 DB 함수 하나로 옮겨 두 경로가 같은 규칙을 쓰게 하고, E2E를 머지 전 파이프라인에 넣겠습니다.</p>
+            <p><b>배운 것</b> 로그아웃 문제에서 가설 두 개가 연달아 빗나갔을 때, 추측을 이어가는 대신 원인을 가를 수 있는 로그를 먼저 심은 것이 해결의 결정적 한 수였습니다.</p>
+          </div>
         </div>
       </div>
     </article>
@@ -135,44 +190,76 @@
     <!-- 도담 -->
     <article class="project" id="dodam">
       <h3>도담 — 청년 AI 금융 코치 앱</h3>
-      <p class="tagline">소비·자산 데이터를 분석해 목표 달성을 방해하는 문제를 찾고, AI 코치가 그 결과를 쉬운 말로 설명해 주는 Android 앱</p>
+      <p class="tagline">소비·자산 데이터를 분석해 목표 달성을 방해하는 문제를 찾고, AI 코치가 쉬운 말로 설명해 주는 Android 앱</p>
       <div class="row">
         <dl class="facts">
           <dt>기간</dt><dd>2026.08 – 09 (6주)</dd>
-          <dt>구분</dt><dd>SSAFY 특화 프로젝트</dd>
-          <dt>인원</dt><dd>5명</dd>
-          <dt>역할</dt><dd>서버(AI 코치·개선 추적·리포트)<br>AWS 인프라·배포 단독</dd>
+          <dt>구분</dt><dd>삼성청년SW·AI아카데미 팀 프로젝트 (금융)</dd>
+          <dt>인원</dt><dd>5명 (BE 3 · FE 2)</dd>
+          <dt>내 역할</dt><dd>BE — AI 코치·개선 추적·리포트<br>인프라·배포 단독</dd>
           <dt>기술</dt><dd>Spring Boot, MySQL, Redis, OpenAI API, AWS EC2, Jenkins, Docker, k6</dd>
+          <dt>기여</dt><dd>팀 커밋 330 / 1,164 (28%)</dd>
         </dl>
         <div class="main">
-          <h4>금액을 지어내지 않는 AI 코치</h4>
+          <h4>개요</h4>
+          <div class="overview-box">
+            <p><b>배경</b> 사회초년생은 자기 소비와 대출·저축 구조 중 무엇이 목표를 늦추는지 알기 어렵습니다.</p>
+            <p><b>목표</b> 교육용 모의 금융 데이터를 분석해 문제를 찾고, AI 코치가 설명하고, 개선 행동과 그 효과를 추적합니다.</p>
+            <p class="kw">금융 진단 · AI 코치 설명 · 개선 행동 추적 · 전후 비교 · 월간·일간 리포트</p>
+          </div>
+
+          <h4>역할과 핵심 기여</h4>
           <ul>
-            <li>AI 코치 API 3종을 만들었습니다. LLM에는 서버가 이미 계산한 진단 결과만 넘기고, 이름·계좌·거래 내역은 애초에 읽지 않게 했습니다.</li>
-            <li>답변에 든 숫자를 서버 계산값과 하나씩 맞춰 보고, <b>맞지 않는 숫자가 하나라도 있으면 답변을 버리고</b> 준비해 둔 문장으로 답했습니다. 말투가 조금 딱딱해져도 금액이 틀리는 것은 막아야 했습니다.</li>
-            <li>같은 질문은 Redis에 저장해 둔 답변으로 돌려줘 응답 시간을 <b>2.29초에서 0.11초</b>로 줄였고, 사용자당 시간당 40회로 호출을 제한해 AI 사용료가 갑자기 늘지 않게 했습니다.</li>
-            <li>개선 행동 추적 API 11개와 월간·일간 리포트 API 8개도 맡았습니다.</li>
+            <li><b>AI 코치 API 3종</b> — LLM에는 서버가 계산한 진단 결과만 넘기고 이름·계좌·거래 내역은 애초에 읽지 않게 했습니다. 답변 속 숫자를 서버 값과 하나씩 대조해, <b>하나라도 다르면 답변을 버리고</b> 준비된 문장으로 답합니다. 어떤 실패에도 화면이 깨지지 않도록 항상 정상 응답과 실패 사유(6종)를 함께 보냅니다.</li>
+            <li><b>개선 행동 추적 API 11개 · 리포트 API 8개</b> — 추천을 받아들이면 같은 트랜잭션에서 행동을 기록하고, 받아들이기 전후 3개월의 월평균을 비교합니다. 리포트 테이블 3개와 마이그레이션을 설계했습니다.</li>
+            <li><b>인프라·배포 단독</b> — AWS EC2, Docker Compose 14개 서비스, Jenkins 자동 배포, HTTPS, 요청 횟수 제한, 백업·복구, Prometheus·Grafana·Loki 모니터링. 팀원들이 코드를 올리기 전에 파이프라인부터 검증하려고 배포 자동화 일정을 5일차에서 2일차로 당겼습니다.</li>
+            <li><b>부하 테스트·성능 개선</b> — k6로 12회 측정하고 자바 프로파일러(JFR)로 병목을 찾았습니다.</li>
+            <li><b>테스트·문서</b> — 테스트 파일 15개(<code>@Test</code> 91개). 그중 코드와 DB의 컬럼 타입을 자동 대조하는 테스트는 장애 뒤 재발 방지용으로 만들었습니다. 인프라 지식이 한 사람에게만 있으면 병목이 된다고 보고 운영 README와 포팅 매뉴얼을 썼습니다.</li>
           </ul>
 
-          <h4>잘못된 변경이 올라와도 멈추지 않는 배포</h4>
-          <ul>
-            <li>AWS EC2 서버 구성과 Jenkins 배포 자동화를 혼자 맡았습니다. 코드가 합쳐지면 빌드·테스트·배포가 자동으로 진행됩니다.</li>
-            <li>제가 만든 테이블의 타입이 코드와 어긋나 서비스가 60분 멈춘 뒤, <b>새 버전을 임시로 먼저 띄워 정상 기동을 확인해야만</b> 실제 서버를 교체하게 바꿨습니다. 닷새 뒤 팀원의 DB 변경이 코드와 맞지 않았을 때 이 단계가 배포를 막아 서비스는 멈추지 않았습니다.</li>
-            <li>HTTPS, 로그인 요청 횟수 제한, DB 자동 백업과 복구 리허설, Prometheus·Grafana 모니터링을 갖췄습니다.</li>
-          </ul>
+          <h4>기술 선택과 구현</h4>
+          <div class="t-wrap">
+          <table class="t stack">
+            <thead><tr><th>기술</th><th>선택 이유 · 검토한 대안</th><th>구현</th></tr></thead>
+            <tbody>
+              <tr><td>Jenkins</td><td data-l="이유">처음엔 GitLab CI + 자체 Runner를 1순위로 뒀지만, 교육 환경의 GitLab과 Jenkins 조합은 전례가 있어 웹훅이 막힐 위험이 낮다고 보고 바꿨습니다.</td><td data-l="구현">빌드·테스트 → 임시 컨테이너로 기동 확인 → 교체 → 2단계 헬스체크 → 실패 시 롤백</td></tr>
+              <tr><td>Redis 답변 캐시</td><td data-l="이유">같은 데이터에 같은 질문이면 LLM을 다시 부를 이유가 없습니다. 캐시는 비용 절감 장치일 뿐이라, Redis가 죽으면 조용히 건너뜁니다.</td><td data-l="구현">키에 프롬프트 버전과 입력 데이터 해시를 넣어, 데이터가 바뀌면 만료를 기다리지 않고 자동 무효화</td></tr>
+              <tr><td>Lua 호출 카운터</td><td data-l="이유">Nginx의 IP당 초당 20건 제한은 시간당 72,000건이라 AI 비용 상한이 될 수 없었습니다. 증가와 만료를 따로 보내면 그 사이 연결이 끊길 때 만료 없는 카운터가 남아 사용자가 영구히 막힙니다. 정밀한 슬라이딩 윈도우는 필요 없어 고정 창을 택했습니다.</td><td data-l="구현">사용자당 시간당 40건. 캐시와 반대로, Redis 장애 시에는 서버 메모리 카운터로 전환해 제한을 유지</td></tr>
+              <tr><td>gpt-5.4-mini</td><td data-l="이유">gpt-4o-mini와 같은 프롬프트로 비교: 지연 1.72s vs 1.85s, 4o-mini는 금융 진단을 시스템 모니터링 지표로 오해했습니다.</td><td data-l="구현">모델명·토큰 파라미터를 설정으로 분리 → 모델이 파라미터를 거부했을 때 설정 한 줄로 해결</td></tr>
+              <tr><td>비관적 잠금</td><td data-l="이유">“있으면 읽고 없으면 만든다”를 잠금 없이 하면 동시 요청 둘 다 없다고 보고 INSERT해 UNIQUE 위반이 납니다.</td><td data-l="구현">같은 사용자의 리포트 생성을 사용자 행 잠금으로 직렬화 (팀의 기존 방식과 통일)</td></tr>
+              <tr><td>JFR</td><td data-l="이유">JDK 21 내장이라 설치가 필요 없습니다. jcmd는 실행 이미지에 없었고, APM은 이 규모엔 과했습니다.</td><td data-l="구현">부하 중 CPU 사용처를 계층별로 집계</td></tr>
+            </tbody>
+          </table>
+          </div>
 
-          <h4>측정으로 찾은 병목</h4>
-          <ul>
-            <li>부하 테스트에서 요청이 DB 연결을 기다리며 쌓이자 연결 수 부족을 의심했지만, <b>CPU가 먼저 97%까지 차고</b> 50초 뒤에야 대기가 생겼습니다. 연결 수만 늘렸다면 나아지지 않았을 것입니다.</li>
-            <li>자바 프로파일러로 CPU 사용처를 찾아 코드 수정 없이 설정 두 가지로 처리량 <b>+9.4%</b>. 이후 22분 동안 100만 건을 보낸 테스트에서 실패는 0건이었습니다.</li>
-          </ul>
+          <h4>성과</h4>
+          <div class="t-wrap">
+          <table class="t">
+            <thead><tr><th>항목</th><th>전</th><th>후</th></tr></thead>
+            <tbody>
+              <tr><td>AI 코치 응답 시간</td><td class="num">2.29s</td><td class="num">0.11s (캐시 적중)</td></tr>
+              <tr><td>처리량 (k6)</td><td class="num">631 req/s</td><td class="num">690 req/s (+9.4%, 코드 수정 0줄)</td></tr>
+              <tr><td>사용자 여정 소요 p95</td><td class="num">2.01s</td><td class="num">1.47s (−27%)</td></tr>
+              <tr><td>잘못된 변경 배포 시 중단</td><td class="num">60분</td><td class="num">0분 (사전 검증이 차단)</td></tr>
+              <tr><td>지속 부하 22분</td><td colspan="2">1,003,064 요청 · 795.8 req/s · 실패 0%</td></tr>
+            </tbody>
+          </table>
+          </div>
+
+          <h4>회고</h4>
+          <div class="retro">
+            <p><b>남은 한계</b> 부하 테스트를 서비스와 같은 서버에서 돌렸고 테스트 계정이 4개뿐이라 캐시 적중률이 실제보다 높게 나왔을 수 있습니다. 병목인 4 vCPU 상한은 그대로 남았습니다. 컬럼 타입 대조 테스트도 엔티티가 없는 테이블은 검사하지 못합니다.</p>
+            <p><b>개선 방안</b> 부하 발생기를 다른 서버로 분리하고 거래가 많은 사용자까지 포함해 다시 측정하겠습니다.</p>
+            <p><b>배운 것</b> 처음엔 “보안 필터 비용은 0”이라고 판단했지만, 프로파일링해 보니 약 4.3%였습니다. 지표가 보여 주는 범위 밖은 지표로 판단할 수 없다는 걸 알게 됐고, 그 판단을 기록에 그대로 정정해 남겼습니다.</p>
+          </div>
 
           <details>
             <summary>시스템 구조 보기</summary>
 <pre class="arch">Android 앱 ── HTTPS ──▶ Nginx ──▶ Spring Boot ──▶ MySQL / Redis
-                                     ├──▶ SSAFY 금융망
-                                     ├──▶ LLM (SSAFY GMS)
+                                     ├──▶ 교육용 모의 금융 API
+                                     ├──▶ LLM (OpenAI 중계)
                                      └──▶ FCM 푸시
-AWS EC2 · Docker Compose
+AWS EC2 · Docker Compose 14개 서비스
 GitLab ──▶ Jenkins ──▶ 빌드·테스트 ──▶ 임시 기동 확인 ──▶ 교체 ──▶ 헬스체크 ──▶ (실패 시) 롤백</pre>
           </details>
         </div>
@@ -182,35 +269,50 @@ GitLab ──▶ Jenkins ──▶ 빌드·테스트 ──▶ 임시 기동 확
     <!-- HobbyKit -->
     <article class="project" id="hobbykit">
       <h3>HobbyKit — AI 취미 키트 추천 커머스</h3>
-      <p class="tagline">취미를 시작하려는 사람에게 대화형 AI가 입문 키트를 추천하고, 매장에 들어오면 비콘으로 쿠폰을 주는 Flutter 앱</p>
+      <p class="tagline">대화형 AI가 입문 키트를 추천하고, 매장에 들어오면 비콘으로 쿠폰을 주는 Flutter 앱</p>
       <div class="row">
         <dl class="facts">
           <dt>기간</dt><dd>2026.05 – 06 (5주)</dd>
+          <dt>구분</dt><dd>삼성청년SW·AI아카데미 교육 과정 프로젝트</dd>
           <dt>인원</dt><dd>2명</dd>
-          <dt>역할</dt><dd>서버 전반, AI 추천<br>비콘 쿠폰 서버·앱 연동<br>저장소·배포 세팅</dd>
+          <dt>내 역할</dt><dd>서버 전반·AI 추천<br>비콘 쿠폰 서버·앱 연동<br>저장소·배포 세팅</dd>
           <dt>기술</dt><dd>Spring Boot, FastAPI, Node.js, Flutter, MySQL, Redis, Qdrant, OpenAI API</dd>
+          <dt>기여</dt><dd>팀 커밋 49 / 69 (71%)</dd>
         </dl>
         <div class="main">
-          <h4>쿠폰은 한 장만 — 제 코드의 틈을 고친 일</h4>
+          <h4>개요</h4>
+          <div class="overview-box">
+            <p><b>배경</b> 취미를 시작하려는 사람은 무엇을 사야 할지부터 막힙니다.</p>
+            <p><b>목표</b> 대화로 상황을 파악해 실제로 파는 키트를 추천하고, 매장 방문까지 이어지게 합니다.</p>
+            <p class="kw">대화형 키트 추천 · 추천 근거 차트 · 비콘 매장 쿠폰 · 주문·결제 · 찜·장바구니</p>
+          </div>
+
+          <h4>역할과 핵심 기여</h4>
           <ul>
-            <li>매장 비콘을 감지하면 웰컴 쿠폰을 주는 서버 API와, 앱이 비콘을 감지하면 그 API를 부르는 연동을 맡았습니다.</li>
-            <li>제가 처음 짠 서버 코드는 “이미 받았는지 확인”과 “받았다고 기록”이 따로 나뉘어 있어, <b>요청이 동시에 오면 둘 다 통과해 쿠폰이 두 장 나갈 수 있었습니다.</b> 2주 뒤 이를 찾아 Redis 명령 하나(<code>setIfAbsent</code>)로 합쳐 한 장만 나가게 고쳤고, 쿠폰 저장이 실패하면 기록을 지워 다시 받을 수 있게 했습니다.</li>
-            <li>앱이 발급에 실패해도 쿠폰이 나온 것처럼 보여 주던 것을 “이미 받은 매장”과 “발급 실패, 다시 시도”로 나눠 보여 주게 고쳤습니다.</li>
-            <li>앱이 막아 주더라도, 돈이 걸린 결과는 서버가 스스로 한 번만 보장해야 한다고 배웠습니다. 주문도 같은 이유로 중복 생성을 막는 키(<code>Idempotency-Key</code>)를 두었습니다.</li>
+            <li><b>비콘 쿠폰 서버 API와 앱 연동</b> — 제가 처음 짠 코드는 “이미 받았는지 확인”과 “받았다고 기록”이 나뉘어 있어, 요청이 동시에 오면 쿠폰이 두 장 나갈 수 있었습니다. 2주 뒤 이를 찾아 Redis 명령 하나(<code>setIfAbsent</code>)로 합쳤고, 쿠폰 저장이 실패하면 기록을 지워 다시 받을 수 있게 했습니다. 앱이 실패해도 쿠폰이 나온 것처럼 보여 주던 화면도 “이미 받은 매장”과 “발급 실패, 다시 시도”로 나눴습니다.</li>
+            <li><b>주문 중복 방지</b> — 같은 주문 요청이 다시 와도 한 건만 만들어지도록 <code>Idempotency-Key</code>를 처리했습니다.</li>
+            <li><b>RAG 키트 추천</b> — 질문과 비슷한 키트를 벡터 검색으로 찾아 LLM이 답하게 하고, 지금 추천해도 되는 상황인지 먼저 판단하게 했습니다. 없는 키트를 즉석에서 조합해 만들어 내던 동작을 없애고 <b>판매 중인 키트만</b> 추천하게 바꿨습니다.</li>
+            <li><b>게이트웨이·DB·배포</b> — 게이트웨이와 API 문서, MySQL 스키마 전체, <code>docker compose</code> 12개 서비스, GitHub Actions CI를 만들었습니다.</li>
           </ul>
 
-          <h4>AI 키트 추천</h4>
-          <ul>
-            <li>질문과 비슷한 키트를 벡터 검색(Qdrant)으로 찾고, 그 결과로 LLM이 답하는 RAG 구조를 만들었습니다.</li>
-            <li>대화 흐름을 보고 지금 추천해도 되는 상황인지 먼저 판단하고, <b>실제로 판매 중인 키트만</b> 추천하게 제한했습니다.</li>
-            <li>추천 이유를 세 가지 기준의 비율로 나눠 앱에서 원형 차트로 보여 줍니다.</li>
-          </ul>
+          <h4>기술 선택과 구현</h4>
+          <div class="t-wrap">
+          <table class="t stack">
+            <thead><tr><th>기술</th><th>선택 이유 · 검토한 대안</th><th>구현</th></tr></thead>
+            <tbody>
+              <tr><td>Redis <code>setIfAbsent</code></td><td data-l="이유">앱이 첫 감지 뒤 스캔을 멈추더라도, 두 기기에서 같은 계정을 쓰거나 API를 직접 부르면 앱은 막지 못합니다. 쿠폰은 돈이라 서버가 스스로 한 장을 보장해야 했습니다.</td><td data-l="구현">키 확인과 기록을 명령 하나로, 30분 만료를 같은 명령에. 저장 실패 시 키 삭제</td></tr>
+              <tr><td>서비스별 서킷 브레이커</td><td data-l="이유">AI 서비스가 느려질 때 상품·주문까지 같이 멈추지 않게 하려고</td><td data-l="구현">실패율 50%·최소 5건이 쌓여야 차단. 타임아웃은 내부망 Spring 10초, LLM을 순차로 2번 부를 수 있는 AI 서비스 60초</td></tr>
+              <tr><td>가짜 임베딩 모드</td><td data-l="이유">API 키 없는 로컬·CI에서도 추천 흐름을 돌려 보려고</td><td data-l="구현">키가 없으면 고정 벡터로 대체</td></tr>
+            </tbody>
+          </table>
+          </div>
 
-          <h4>서비스 연결</h4>
-          <ul>
-            <li>앱 요청을 Spring과 AI 서비스로 나눠 보내는 게이트웨이를 만들고, 한쪽이 죽어도 다른 쪽까지 번지지 않게 서비스별 차단기(circuit breaker)를 달았습니다.</li>
-            <li><code>docker compose up</code> 한 번으로 12개 서비스가 뜨게 구성하고, GitHub Actions로 PR마다 테스트와 빌드를 돌렸습니다.</li>
-          </ul>
+          <h4>회고</h4>
+          <div class="retro">
+            <p><b>남은 한계</b> 쿠폰은 30분 쿨다운으로만 막아, 30분 뒤 다시 들어오면 또 발급됩니다. “1회 한정”인지 “방문마다”인지 정책을 먼저 정하지 않았습니다. 테스트 코드도 서비스 응답을 확인하는 스모크 테스트 정도에 그쳤고, 동시 첫 로그인 시 사용자 ID가 충돌할 수 있다는 문제는 이슈로만 남겼습니다.</p>
+            <p><b>개선 방안</b> 정책을 먼저 정하고, 1회 한정이면 Redis로 순간 중복을 거른 뒤 DB 유니크 제약을 마지막 방어선으로 두 겹 걸겠습니다.</p>
+            <p><b>배운 것</b> 앱이 막아 주더라도 돈이 걸린 결과는 서버가 스스로 한 번만 보장해야 합니다.</p>
+          </div>
         </div>
       </div>
     </article>
@@ -218,19 +320,20 @@ GitLab ──▶ Jenkins ──▶ 빌드·테스트 ──▶ 임시 기동 확
     <!-- 들락날룸 -->
     <article class="project" id="roomtrade">
       <h3>들락날룸 — 교육생 양도 마켓</h3>
-      <p class="tagline">SSAFY 구미 교육생끼리 원룸·생활물품·교재를 넘겨주고 받는 웹 서비스 MVP</p>
+      <p class="tagline">삼성청년SW·AI아카데미 구미 교육생끼리 원룸·생활물품·교재를 넘겨주고 받는 웹 서비스 MVP</p>
       <div class="row">
         <dl class="facts">
           <dt>기간</dt><dd>2026.05 (1주)</dd>
+          <dt>구분</dt><dd>교육 과정 프로젝트</dd>
           <dt>인원</dt><dd>4명</dd>
-          <dt>역할</dt><dd>로그인 인증, 지도, 사진 업로드</dd>
+          <dt>내 역할</dt><dd>로그인 인증, 지도, ERD</dd>
           <dt>기술</dt><dd>React, TypeScript, FastAPI, MySQL, Kakao Map</dd>
         </dl>
         <div class="main">
           <ul>
-            <li>회원가입·로그인을 서버부터 React 화면까지 맡았습니다. 비밀번호는 bcrypt로 저장하고 JWT로 로그인 상태를 유지합니다.</li>
-            <li>토큰이 <b>만료된 경우와 위조된 경우를 구분</b>해, 화면에서 재로그인 안내와 오류 처리를 따로 할 수 있게 했습니다.</li>
-            <li>카카오 지도를 필요할 때만 불러오고, 여러 번 불러와도 한 번만 로드되게 했습니다.</li>
+            <li><b>회원가입·로그인</b> — FastAPI 인증 로직과 React 화면을 맡았습니다. 비밀번호는 bcrypt로 저장하고 JWT로 로그인 상태를 유지합니다. 토큰이 <b>만료된 경우와 위조된 경우를 별도 예외로 나눠</b>, 화면에서 재로그인 안내와 오류 처리를 따로 할 수 있게 했습니다.</li>
+            <li><b>카카오 지도</b> — 지도 스크립트를 필요할 때만 불러오고 여러 번 불러와도 한 번만 로드되게 했으며, 주소 검색에 실패하면 키워드 검색으로 대신 찾습니다.</li>
+            <li><b>ERD</b> — 팀 스키마 합의의 기준이 된 ERD와 사용자 테이블 마이그레이션을 작성했습니다.</li>
           </ul>
           <figure>
             <img src="assets/img/roomtrade-list.png" alt="들락날룸 게시글 목록 화면" loading="lazy" width="3248" height="1968">
@@ -249,14 +352,15 @@ GitLab ──▶ Jenkins ──▶ 빌드·테스트 ──▶ 임시 기동 확
           <dt>기간</dt><dd>2025.03 – 06</dd>
           <dt>구분</dt><dd>Stony Brook CSE416 (Software Engineering)</dd>
           <dt>인원</dt><dd>3명</dd>
-          <dt>역할</dt><dd>Google 로그인, 알림, 기록 화면</dd>
+          <dt>내 역할</dt><dd>Google 로그인, 알림, 기록 화면</dd>
           <dt>기술</dt><dd>React, TypeScript, FastAPI, Supabase</dd>
+          <dt>기여</dt><dd>팀 커밋 102 / 536 (19%)</dd>
         </dl>
         <div class="main">
           <ul>
-            <li>Google OAuth 로그인을 React와 FastAPI 양쪽에서 구현했습니다.</li>
-            <li>집중 기록 캘린더와 딴짓 기록 목록·상세(감지 순간 캡처 포함) 화면을 만들었습니다.</li>
-            <li>“다른 탭에 있으면 알림을 못 본다”는 피드백을 받고, <b>브라우저가 뒤에 있어도 뜨는 데스크톱 알림</b>과 알림음을 추가했습니다.</li>
+            <li><b>Google OAuth 로그인</b>을 React와 FastAPI 양쪽에서 구현했습니다.</li>
+            <li><b>기록 화면</b> — 집중 기록 캘린더와 딴짓 기록 목록·상세(감지 순간 캡처 포함), 페이지 나누기를 만들었습니다.</li>
+            <li><b>피드백 반영</b> — “다른 탭에 있으면 알림을 못 본다”는 피드백을 받고, 브라우저가 뒤에 있어도 뜨는 데스크톱 알림과 알림음을 추가했습니다.</li>
             <li>요구사항 정의서, 유스케이스, 테스트 케이스, 버그 리포트 등 개발 문서를 영어로 작성하며 진행했습니다.</li>
           </ul>
         </div>
@@ -264,46 +368,68 @@ GitLab ──▶ Jenkins ──▶ 빌드·테스트 ──▶ 임시 기동 확
     </article>
   </section>
 
-  <!-- 트러블슈팅 -->
+  <!-- 문제 해결 -->
   <section class="sec" id="troubleshooting">
-    <h2>트러블슈팅</h2>
+    <h2>문제 해결 사례</h2>
 
     <div class="case">
       <h3>지도 묶음을 누르면 가끔 로그인이 풀리던 문제</h3>
-      <p class="where">길봄 · 2026.08</p>
-      <dl>
-        <dt>증상</dt><dd>결함 지도의 묶음을 누르면 가끔 로그인 화면으로 튕겼습니다. 개발자도구를 보니 지도 조회 API가 간헐적으로 401을 내고 있었습니다.</dd>
-        <dt>시도</dt><dd>한꺼번에 나가는 요청이 원인이라고 보고 요청을 하나로 줄였지만, 로그인은 그대로 풀렸습니다. 그 뒤로는 추측으로 고치기를 멈추고, 인증이 실패하는 순간과 로그인 기록이 지워지는 과정을 따라갈 수 있게 로그부터 넣었습니다.</dd>
-        <dt>원인</dt><dd>서버가 로그인 기록을 지운 게 아니라, 브라우저의 로그인 쿠키가 서버에 없는 값으로 바뀌어 있었습니다. 결함 사진을 불러오는 API가 응답마다 새 쿠키를 내려보냈고, 사진 여러 장을 동시에 받으면 마지막에 도착한 응답의 쿠키가 남았습니다. 그래서 매번이 아니라 가끔만 풀렸습니다.</dd>
-        <dt>해결</dt><dd>인증·사진 API·서버 앞단 모두 다른 팀원의 담당이었지만, 확인한 원인과 로그를 갖춰 넘겼습니다. Nginx에서 사진 요청에 쿠키가 오가지 않게 막아 급한 불을 끄고, 근본 원인인 사진 API도 수정을 요청했습니다. 이후 더 이상 로그인이 풀리지 않았습니다.</dd>
-      </dl>
+      <p class="where">길봄 · 인증 · 이미지 API · Nginx에 걸친 문제</p>
+      <table class="t">
+        <tbody>
+          <tr><td>문제</td><td>결함 지도의 묶음을 누르면 가끔 로그인 화면으로 튕겼습니다. 개발자도구에서는 지도 조회 API가 간헐적으로 401을 내고 있었습니다.</td></tr>
+          <tr><td>추가 확인</td><td>요청이 몰려서라고 보고 묶음 클릭 시 요청을 20개에서 1개로 줄였지만 그대로였습니다. 추측으로 고치기를 멈추고, 쿠키가 안 온 것인지 · 왔는데 서버에 세션이 없는 것인지를 가를 수 있는 로그부터 심었습니다. 식별자 유출을 막으려고 세션 ID는 남기지 않고 요청 ID로만 추적했습니다.</td></tr>
+          <tr><td>원인</td><td>결함 사진을 불러오는 API가 응답마다 새 로그인 쿠키를 내려보냈습니다. 사진 여러 장을 동시에 받으면 마지막에 도착한 응답의 쿠키가 기존 쿠키를 덮어써, 매번이 아니라 가끔만 풀렸습니다. 지도 API는 바뀐 쿠키를 처음 들고 간 요청이었을 뿐입니다.</td></tr>
+          <tr><td>해결</td><td>세 영역 모두 다른 팀원 담당이라 원인과 로그를 갖춰 넘겼습니다. Nginx에서 사진 요청·응답의 쿠키를 양방향으로 막아 급한 불을 끄고, 근본 원인인 사진 API도 세션을 만들지 않게 수정을 요청했습니다.</td></tr>
+          <tr><td>결과</td><td>이후 묶음을 눌러도 로그인이 풀리지 않았고, 브라우저에 쿠키가 닿지 않는지 확인하는 계약 테스트가 추가됐습니다.</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="case">
-      <h3>60분 서비스 중단, 그리고 같은 실수를 막는 배포</h3>
-      <p class="where">도담 · 2026.09</p>
-      <dl>
-        <dt>증상</dt><dd>배포 후 서버가 뜨지 않아 약 60분 동안 서비스가 멈췄습니다.</dd>
-        <dt>원인</dt><dd>제가 만든 월간 리포트 테이블의 컬럼이 DB에서는 <code>CHAR(7)</code>, 코드에서는 <code>VARCHAR(7)</code>이라 기동 시 검증에 실패했습니다. 당시 배포는 기존 서버를 먼저 내리는 구조라 되돌릴 버전도 없었습니다.</dd>
-        <dt>해결</dt><dd>타입을 맞춘 뒤, 코드와 DB의 컬럼 타입을 자동 대조하는 테스트를 만들고 새 버전을 임시로 먼저 띄워 확인하는 단계를 배포에 넣었습니다.</dd>
-        <dt>결과</dt><dd>닷새 뒤 팀원의 같은 유형 실수가 이 단계에 걸려 <b>서비스 중단 없이</b> 막혔습니다.</dd>
-      </dl>
+      <h3>60분 서비스 중단 → 같은 실수를 배포 전에 막는 구조</h3>
+      <p class="where">도담 · 배포 · DB 마이그레이션</p>
+      <table class="t">
+        <tbody>
+          <tr><td>문제</td><td>배포 후 서버가 뜨지 않아 약 60분 동안 서비스가 멈췄습니다.</td></tr>
+          <tr><td>원인</td><td>제가 만든 월간 리포트 테이블의 컬럼이 DB에서는 <code>CHAR(7)</code>, 코드에서는 <code>VARCHAR(7)</code>이라 기동 시 스키마 검증에 실패했습니다. 당시 배포는 기존 서버를 먼저 내리는 구조라 되돌릴 버전이 없었습니다.</td></tr>
+          <tr><td>해결</td><td>① 코드 쪽 465개 컬럼과 DB 쪽 502개 컬럼을 DB 없이 대조하는 테스트 — 처음 방식은 없는 문제 40개를 만들어 내 타입 계열 비교로 바꿨고, 수정을 되돌려 실제로 잡히는지 확인했습니다. ② 새 버전을 임시 컨테이너로 먼저 띄워 기동을 확인해야만 교체 ③ 롤백 지점은 정상일 때만 갱신</td></tr>
+          <tr><td>결과</td><td class="ba"><s>중단 60분</s><span class="arrow">→</span><b>0분</b> — 닷새 뒤 팀원의 DB 변경이 코드와 맞지 않았을 때 사전 검증이 배포를 막았습니다. 환경변수가 빠진 배포도 같은 단계에서 걸렸습니다.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="case">
+      <h3>병목은 DB 연결이 아니라 CPU였다</h3>
+      <p class="where">도담 · 부하 테스트 · 성능</p>
+      <table class="t">
+        <tbody>
+          <tr><td>문제</td><td>부하를 올리자 요청이 DB 연결을 기다리며 쌓였고, VU를 늘려도 처리량이 늘지 않았습니다.</td></tr>
+          <tr><td>원인</td><td>연결 수 부족을 의심했지만 측정해 보니 <b>CPU가 먼저 97%까지 찼고</b> 50초 뒤에야 연결 대기가 생겼습니다. DB는 한가했습니다. JFR로 보니 직접 작성한 코드는 CPU의 0.4%뿐이고 대부분 프레임워크 계층이었습니다.</td></tr>
+          <tr><td>해결</td><td>연결 수를 늘리는 대신 설정 두 가지를 바꿨습니다. ① SQL 구문 캐시로 드라이버의 SQL 파싱 비용 제거 ② 보안 필터 체인 관측 비활성화 (관측 비용의 46.5%가 여기서 나옴)</td></tr>
+          <tr><td>결과</td><td class="ba">처리량 <s>631</s><span class="arrow">→</span><b>690 req/s</b> (+9.4%), 서버 피크 <s>745</s><span class="arrow">→</span><b>831 req/s</b>, 코드 수정 0줄</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="case">
       <h3>설정은 했는데 한 번도 동작하지 않던 로그인 횟수 제한</h3>
-      <p class="where">도담 · 2026.09</p>
-      <dl>
-        <dt>원인</dt><dd>Nginx에 <code>/api/auth/</code> 경로로 걸었지만 실제 경로는 <code>/api/v1/auth/</code>였습니다. 설정 파일만 보면 멀쩡했습니다.</dd>
-        <dt>해결</dt><dd>경로를 고친 뒤 직접 요청을 보내 12번째부터 차단되는 것을 확인했습니다. 그 뒤로는 보안 설정도 켜 두는 데서 끝내지 않고 실제로 막히는지 확인합니다.</dd>
-      </dl>
+      <p class="where">도담 · 보안 · Nginx</p>
+      <table class="t">
+        <tbody>
+          <tr><td>문제</td><td>로그인·가입 요청 횟수 제한이 배포 이후 한 번도 적용되지 않았습니다.</td></tr>
+          <tr><td>원인</td><td>Nginx에 <code>/api/auth/</code> 경로로 걸었지만 실제 경로는 <code>/api/v1/auth/</code>였습니다. 설정 파일만 보면 멀쩡했습니다.</td></tr>
+          <tr><td>해결</td><td>로그인·가입만 정확히 지정하고, 교육장 망에서 여러 명이 같은 IP를 쓰는 점을 고려해 분당 20회로 정했습니다.</td></tr>
+          <tr><td>결과</td><td class="ba">적중 <s>0회</s><span class="arrow">→</span>직접 요청을 보내 <b>12번째부터 차단</b>되는 것을 확인</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <!-- 학력·경력 -->
+  <!-- 이력 -->
   <section class="sec about" id="about">
-    <h2>학력 · 경력 · 활동</h2>
-    <div class="row"><span class="side">2026.01 –</span><div><h3>삼성청년SW·AI아카데미 (SSAFY) 15기</h3><p>상반기 925시간 교육 (Spring·DB·Android 등, 교육 중 HobbyKit·들락날룸 진행) · 이후 팀 프로젝트 길봄(공통)·도담(특화)</p></div></div>
+    <h2>교육 · 경력 · 활동</h2>
+    <div class="row"><span class="side">2026.01 – 재학 중</span><div><h3>삼성청년SW·AI아카데미 15기</h3><p>삼성전자·고용노동부 운영 SW 교육 과정. 상반기 925시간 동안 Java·Spring·DB·Android(240시간) 등을 배우며 교육 과정 프로젝트 2개(HobbyKit, 들락날룸)를 진행했고, 하반기에는 6주 팀 프로젝트 2개(길봄, 도담)를 진행했습니다.</p></div></div>
     <div class="row"><span class="side">2025.08 – 2025.10</span><div><h3>인턴 · AI 챗봇 MVP 개발</h3><p>기존 웹 서비스와 연동되는 AI 챗봇 웹페이지를 프론트엔드·백엔드·배포까지 혼자 개발하고, 연동 서비스 개발자와 협의해 인터페이스를 설계했습니다. (보안서약으로 세부 내용 비공개)</p></div></div>
     <div class="row"><span class="side">2025.02 – 2025.11</span><div><h3>Teaching Assistant · Stony Brook CSE316</h3><p>React·Node.js·MySQL 풀스택 수업 조교로 두 학기 활동했고, 두 번째 학기에는 30여 명을 혼자 맡았습니다. 교수님이 과제를 공개하기 전에 직접 풀어 보며 헷갈리는 요구사항을 찾아 전달하는 일도 맡았습니다.</p></div></div>
     <div class="row"><span class="side">2025.01 – 2025.02</span><div><h3>Research Assistant · SUNY Korea</h3><p>도메인 시프트·샘플링 기법 관련 머신러닝 연구 보조</p></div></div>
@@ -313,7 +439,7 @@ GitLab ──▶ Jenkins ──▶ 빌드·테스트 ──▶ 임시 기동 확
 
   <section class="sec about">
     <h2>수상 · 자격</h2>
-    <div class="row"><span class="side">2026.08</span><div><h3>우수상 · 삼성전자</h3><p>삼성청년SW·AI아카데미 2학기 공통 프로젝트 구미 1반 1등 (길봄)</p></div></div>
+    <div class="row"><span class="side">2026.08</span><div><h3>우수상 · 삼성전자</h3><p>삼성청년SW·AI아카데미 2학기 팀 프로젝트 구미 1반 1등 (길봄)</p></div></div>
     <div class="row"><span class="side">2026.09</span><div><h3>정보처리기사</h3></div></div>
     <div class="row"><span class="side">2026.05</span><div><h3>TOEIC 935</h3></div></div>
     <div class="row"><span class="side">2025.11</span><div><h3>TOEIC Speaking AM (180)</h3></div></div>
