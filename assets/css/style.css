@@ -221,3 +221,13 @@ table.t td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* problem 4-cell */
 .case table.t td:first-child { width: 80px; color: var(--faint); font-weight: 600; font-size: .88rem; }
+
+/* profile photo */
+.profile { display: flex; align-items: center; gap: 28px; margin-bottom: 28px; }
+.profile .photo { width: 120px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); flex: none; }
+.profile .slogan { margin-top: 0; }
+.profile .name { margin-bottom: 0; }
+@media (max-width: 560px) {
+  .profile { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .profile .photo { width: 96px; height: 120px; }
+}
